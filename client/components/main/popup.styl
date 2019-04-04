@@ -4,17 +4,19 @@ $popupWidth = 300px
 
 .pop-over
   background: #fff
-  border-radius: 3px
-  border: 1px solid #dbdbdb
-  border-bottom-color: #c2c2c2
-  box-shadow: 0 1px 6px rgba(0, 0, 0, .3)
+  border-radius: 4px
+  // border: 1px solid #dbdbdb
+  // border-bottom-color: #c2c2c2
+  // box-shadow: 0 1px 6px rgba(0, 0, 0, .3)
+  box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2), 0px 8px 10px 1px rgba(0,0,0,0.14), 0px 3px 14px 2px rgba(0,0,0,0.12)
   position: absolute
   width: $popupWidth
+  overflow: hidden
   z-index: 99999
   margin-top: 5px
 
   hr
-    margin: 4px -10px
+    margin: 0px -10px
     width: $popupWidth
 
   p,
@@ -39,17 +41,17 @@ $popupWidth = 300px
   .header
     height: 36px
     position: relative
-    margin-bottom: 8px
-    background: #F7F7F7
-    border-bottom: 1px solid #dcdcdc
+    margin-bottom: 6px
+    background: #d9e4ee
+    border-bottom: 1px solid #ACC1D4
     color: darken(white, 60%)
 
     .header-title
       display: block
       line-height: 32px
       padding-top: 4px
-      margin: 0 10px
-      font-weight: bold
+      margin: 0 12px
+      font-weight: normal
       overflow: hidden
       text-overflow: ellipsis
       white-space: nowrap
@@ -138,13 +140,14 @@ $popupWidth = 300px
     clear: both
     cursor: pointer
     display: block
-    font-weight: 700
-    padding: 1.5px 10px
+    font-weight: 600
+    padding: 4px 12px
     position: relative
     margin: 0 -10px
     text-decoration: none
     overflow:hidden
     line-height:33px
+    transition: all 0.2s
 
     .item-name
       display: block

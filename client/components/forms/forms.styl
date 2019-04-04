@@ -5,13 +5,13 @@ textarea,
 input:not([type=file]),
 button
   box-sizing: border-box
-  background-color: #ebebeb
-  border: 1px solid #ccc
-  border-radius: 3px
+  background-color: #ffffff
+  border: 1px solid #ced4da
+  border-radius: 4px
   display: block
   margin-bottom: 12px
   min-height: 34px
-  padding: 7px
+  padding: 8px
 
   &.full
     width: 100%
@@ -33,8 +33,7 @@ input[type="radio"]
 input[type="text"],
 input[type="password"],
 input[type="email"]
-  transition: background 85ms ease-in,
-        border-color 85ms ease-in
+  transition: all 0.2s
   width: 250px
 
   &.inline-input
@@ -64,9 +63,12 @@ textarea
       border-color: #ba1212
 
   &:focus
-    background: #fff
-    border-color: #318ec4
-    box-shadow: 0 0 2px #318ec4
+    box-shadow: rgba(0, 123, 255, 0.25) 0px 0px 0px 3px
+    border-color: rgb(128, 189, 255)
+    outline: 0px
+    // background: #fff
+    // border-color: #318ec4
+    // box-shadow: 0 0 2px #318ec4
 
     &.input-error
       background-color: #f8f7f7
@@ -110,16 +112,19 @@ textarea
 
 input[type="submit"],
 button
-  background: #cfcfcf
-  background: linear-gradient(#cfcfcf, #c2c2c2)
+  // background: #cfcfcf
+  // background: linear-gradient(#cfcfcf, #c2c2c2)
+  background: #6772e5
+  color: #ffffff
   border: none
   cursor: pointer
   display: inline-block
   font-weight: 700
   line-height: 22px
-  margin: 8px 4px 0 0
+  // margin: 8px 4px 0 0
   padding: 7px 20px
   text-align: center
+  transition: all 0.2s
 
   .wide
     padding-left: 30px
@@ -127,13 +132,13 @@ button
 
   &:hover,
   &:focus
-    background: #c2c2c2
-    background: linear-gradient(#c2c2c2, #b5b5b5)
+    background: #4654DE !important
+    // background: linear-gradient(#c2c2c2, #b5b5b5)
 
   &:active
-    background: #b5b5b5
-    background: linear-gradient(#b5b5b5, #a8a8a8)
-    box-shadow: inset 0 3px 6px rgba(0, 0, 0, .1)
+    background: #4654DE !important
+    // background: linear-gradient(#b5b5b5, #a8a8a8)
+    // box-shadow: inset 0 3px 6px rgba(0, 0, 0, .1)
 
     &:hover,
     &:focus,
@@ -142,7 +147,7 @@ button
       background: linear-gradient(#e6e6e6, #e6e6e6)
 
   &.primary
-    background: #005377
+    background: #6772e5
     box-shadow: 0 1px 0 #4d4d4d
     color: white
 
