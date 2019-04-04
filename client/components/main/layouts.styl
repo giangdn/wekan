@@ -53,7 +53,7 @@ body
     margin: 42px auto
     padding: 12px
     border-radius: 4px
-    background: darken(white, 13%)
+    background: #ffffff
     z-index: 110
 
     h2
@@ -376,6 +376,46 @@ a
 .basicTabs-container .tabs-content-container
   padding: 0
   padding-top: 15px
+
+#calendar-view 
+  .fc-bgevent-skeleton
+    tbody
+      background-color: transparent
+  .fc-content-skeleton
+    background-color: transparent !important
+    thead
+      background: transparent !important
+  .fc-toolbar.fc-header-toolbar
+    margin: 16px
+    .fc-left
+      h2
+        line-height: 32px
+    .fc-state-default
+      color: #ffffff
+      background: #6772e5
+      text-shadow: none
+      box-shadow: none
+      border: solid 1px #6772e5
+      border-radius: 0
+    .fc-corner-left.fc-corner-right
+      border-radius: 3px
+
+    .fc-button-group
+      button:nth-child(1)
+        border-top-left-radius: 3px
+        border-bottom-left-radius: 3px
+      button:nth-last-child(1)
+        border-top-right-radius: 3px
+        border-bottom-right-radius: 3px
+  .fc-view-container
+    .fc-head-container 
+      background: #d9e4ee
+      table
+        margin-bottom: 0
+        thead
+          background: transparent !important
+          th
+            padding: 4px
 
 @keyframes fadeIn
   from
