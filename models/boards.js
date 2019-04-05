@@ -209,6 +209,14 @@ Boards.attachSchema(new SimpleSchema({
       'pumpkin',
       'wisteria',
       'midnight',
+      'pink',
+      'yellow',
+      'cyan',
+      'teal',
+      'gray',
+      'indigo',
+      'red',
+      'purple'
     ],
     autoValue() { // eslint-disable-line consistent-return
       if (this.isInsert && !this.isSet) {

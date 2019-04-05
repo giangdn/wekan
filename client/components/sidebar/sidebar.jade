@@ -14,7 +14,7 @@ template(name="sidebar")
           i.fa.fa-navicon
         unless isDefaultView
           h2
-            a.fa.fa-chevron-left.js-back-home
+            a.fa.fa-angle-left.js-back-home
             = getViewTitle
         +Template.dynamic(template=getViewTemplate)
 
