@@ -11,7 +11,7 @@ template(name="sidebar")
           span {{_ 'keyboard-shortcuts' }}
       .sidebar-content.js-board-sidebar-content.js-perfect-scrollbar
         a.hide-btn.js-hide-sidebar
-          i.fa.fa-navicon
+          i.fa.fa-times-thin
         unless isDefaultView
           h2
             a.fa.fa-angle-left.js-back-home
@@ -67,28 +67,35 @@ template(name="boardChangeColorPopup")
 template(name="boardSubtaskSettingsPopup")
   form.board-subtask-settings
     h3 {{_ 'show-parent-in-minicard'}}
-      a#prefix-with-full-path.flex.js-field-show-parent-in-minicard(class="{{#if $eq presentParentTask 'prefix-with-full-path'}}is-checked{{/if}}")
-        .materialCheckBox(class="{{#if $eq presentParentTask 'prefix-with-full-path'}}is-checked{{/if}}")
-        span {{_ 'prefix-with-full-path'}}
-      a#prefix-with-parent.flex.js-field-show-parent-in-minicard(class="{{#if $eq presentParentTask 'prefix-with-parent'}}is-checked{{/if}}")
-        .materialCheckBox(class="{{#if $eq presentParentTask 'prefix-with-parent'}}is-checked{{/if}}")
-        span {{_ 'prefix-with-parent'}}
-      a#subtext-with-full-path.flex.js-field-show-parent-in-minicard(class="{{#if $eq presentParentTask 'subtext-with-full-path'}}is-checked{{/if}}")
-        .materialCheckBox(class="{{#if $eq presentParentTask 'subtext-with-full-path'}}is-checked{{/if}}")
-        span {{_ 'subtext-with-full-path'}}
-      a#subtext-with-parent.flex.js-field-show-parent-in-minicard(class="{{#if $eq presentParentTask 'subtext-with-parent'}}is-checked{{/if}}")
-        .materialCheckBox(class="{{#if $eq presentParentTask 'subtext-with-parent'}}is-checked{{/if}}")
-        span {{_ 'subtext-with-parent'}}
-      a#no-parent.flex.js-field-show-parent-in-minicard(class="{{#if $eq presentParentTask 'no-parent'}}is-checked{{/if}}")
-        .materialCheckBox(class="{{#if $eq presentParentTask 'no-parent'}}is-checked{{/if}}")
-        span {{_ 'no-parent'}}
+    ul.subtask-settings-list
+      li
+        a#prefix-with-full-path.flex.js-field-show-parent-in-minicard(class="{{#if $eq presentParentTask 'prefix-with-full-path'}}is-checked{{/if}}")
+          .materialCheckBox(class="{{#if $eq presentParentTask 'prefix-with-full-path'}}is-checked{{/if}}")
+          span {{_ 'prefix-with-full-path'}}
+      li
+        a#prefix-with-parent.flex.js-field-show-parent-in-minicard(class="{{#if $eq presentParentTask 'prefix-with-parent'}}is-checked{{/if}}")
+          .materialCheckBox(class="{{#if $eq presentParentTask 'prefix-with-parent'}}is-checked{{/if}}")
+          span {{_ 'prefix-with-parent'}}
+      li
+        a#subtext-with-full-path.flex.js-field-show-parent-in-minicard(class="{{#if $eq presentParentTask 'subtext-with-full-path'}}is-checked{{/if}}")
+          .materialCheckBox(class="{{#if $eq presentParentTask 'subtext-with-full-path'}}is-checked{{/if}}")
+          span {{_ 'subtext-with-full-path'}}
+      li
+        a#subtext-with-parent.flex.js-field-show-parent-in-minicard(class="{{#if $eq presentParentTask 'subtext-with-parent'}}is-checked{{/if}}")
+          .materialCheckBox(class="{{#if $eq presentParentTask 'subtext-with-parent'}}is-checked{{/if}}")
+          span {{_ 'subtext-with-parent'}}
+      li
+        a#no-parent.flex.js-field-show-parent-in-minicard(class="{{#if $eq presentParentTask 'no-parent'}}is-checked{{/if}}")
+          .materialCheckBox(class="{{#if $eq presentParentTask 'no-parent'}}is-checked{{/if}}")
+          span {{_ 'no-parent'}}
     div
       hr
 
-    div.check-div
-      a.flex.js-field-has-subtasks(class="{{#if allowsSubtasks}}is-checked{{/if}}")
-        .materialCheckBox(class="{{#if allowsSubtasks}}is-checked{{/if}}")
-        span {{_ 'show-subtasks-field'}}
+    ul.subtask-settings-list
+      li
+        a.flex.js-field-has-subtasks(class="{{#if allowsSubtasks}}is-checked{{/if}}")
+          .materialCheckBox(class="{{#if allowsSubtasks}}is-checked{{/if}}")
+          span {{_ 'show-subtasks-field'}}
 
     label
       | {{_ 'deposit-subtasks-board'}}
@@ -122,8 +129,9 @@ template(name="chooseBoardSource")
       a(href="{{pathFor '/import/wekan'}}") {{_ 'from-wekan'}}
 
 template(name="archiveBoardPopup")
-  p {{_ 'close-board-pop'}}
-  button.js-confirm.negate.full(type="submit") {{_ 'archive'}}
+  div.archive-board-confirm-wrapper
+    p {{_ 'close-board-pop'}}
+    button.js-confirm.negate.full(type="submit") {{_ 'archive'}}
 
 template(name="outgoingWebhooksPopup")
   each integrations
@@ -133,16 +141,14 @@ template(name="outgoingWebhooksPopup")
       else
         h4 {{_ 'no-name'}}
       label
-        | URL
-        input.js-outgoing-webhooks-url(type="text" name="url" value=url)
+        input.js-outgoing-webhooks-url(type="text" placeholder="Input url" name="url" value=url)
         input(type="hidden" value=_id name="id")
       input.primary.wide(type="submit" value="{{_ 'save'}}")
   form.integration-form
     h4
       | {{_ 'new-outgoing-webhook'}}
     label
-      | URL
-      input.js-outgoing-webhooks-url(type="text" name="url" autofocus)
+      input.js-outgoing-webhooks-url(type="text" placeholder="Input url" name="url" autofocus)
     input.primary.wide(type="submit" value="{{_ 'save'}}")
 
 template(name="boardMenuPopup")

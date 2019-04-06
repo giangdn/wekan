@@ -8,24 +8,24 @@ Template.boardMenuPopup.events({
     Sidebar.setView('archives');
     Popup.close();
   },
-  'click .js-change-board-color': Popup.open('boardChangeColor'),
+  // 'click .js-change-board-color': Popup.open('boardChangeColor'),
   'click .js-change-language': Popup.open('changeLanguage'),
-  'click .js-archive-board ': Popup.afterConfirm('archiveBoard', function() {
-    const currentBoard = Boards.findOne(Session.get('currentBoard'));
-    currentBoard.archive();
-    // XXX We should have some kind of notification on top of the page to
-    // confirm that the board was successfully archived.
-    FlowRouter.go('home');
-  }),
+//  'click .js-archive-board ': Popup.afterConfirm('archiveBoard', function() {
+//    const currentBoard = Boards.findOne(Session.get('currentBoard'));
+//    currentBoard.archive();
+//    // XXX We should have some kind of notification on top of the page to
+//    // confirm that the board was successfully archived.
+//    FlowRouter.go('home');
+//  }),
   'click .js-delete-board': Popup.afterConfirm('deleteBoard', function() {
     const currentBoard = Boards.findOne(Session.get('currentBoard'));
     Popup.close();
     Boards.remove(currentBoard._id);
     FlowRouter.go('home');
   }),
-  'click .js-outgoing-webhooks': Popup.open('outgoingWebhooks'),
+  //'click .js-outgoing-webhooks': Popup.open('outgoingWebhooks'),
   'click .js-import-board': Popup.open('chooseBoardSource'),
-  'click .js-subtask-settings': Popup.open('boardSubtaskSettings'),
+  //'click .js-subtask-settings': Popup.open('boardSubtaskSettings'),
 });
 
 Template.boardMenuPopup.helpers({

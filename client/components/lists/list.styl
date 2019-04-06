@@ -166,11 +166,14 @@
     margin-right: 30px
 
   .mini-list
-    flex: 0 0 60px
-    height: 60px
+    // flex: 0 0 60px
+    // height: 60px
     width: 100%
     border-left: 0px
     border-bottom: 1px solid darken(white, 20%)
+    .list-header
+      box-shadow: none
+      margin-bottom: 0
 
   .list
     display: block
@@ -199,16 +202,18 @@
     .list-header-left-icon
       display: inline
       padding: 7px
-      padding-right: 27px
-      margin-top: 1px
+      padding-right: 16px
+      // margin-top: 1px
       top: -@padding
       left: -@padding
+      font-size: 22px
 
     .list-header-menu-icon
       position: absolute
-      padding: 7px
-      top: -@padding
-      right: 17px
+      // padding: 7px
+      // top: -@padding
+      right: 18px
+      font-size: 22px
 
 .link-board-wrapper
   display: flex

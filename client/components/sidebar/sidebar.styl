@@ -14,7 +14,6 @@
     left: 0
     // background: darken(white, 3%)
     background: #ffffff
-    box-shadow: 0px 0px 8px 0px darken(white, 30%)
     z-index: 10
 
   .sidebar-content
@@ -116,7 +115,15 @@
     line-height: 1.6em
     vertical-align: middle
     color: darken(white, 40%)
-
+.board-subtask-settings
+  .subtask-settings-list
+    margin-bottom: 8px
+    li
+      padding: 4px 0
+  div
+    hr
+      margin: 12px -10px
+    
 .board-sidebar
   width: 248px
   right: -@width
@@ -124,6 +131,8 @@
 
   &.is-open
     right: 0
+    .sidebar-shadow
+      box-shadow: 0px 0px 8px 0px darken(white, 30%)
 
 .board-widget h4
   margin: 5px 0
@@ -189,27 +198,25 @@
   .board-sidebar
     width: 100%
     right: -@width
+    .sidebar-shadow
+      box-shadow: none
+      .sidebar-content
+        .board-header-btn-icon
+          font-size: 1.5em
+          margin-right: 32px
+    
 
-    .sidebar-content
       .hide-btn
-        width: 40px
-        height: @width
+        font-size: 2em
         position: absolute
-        right: 5px
-        top: 5px
+        right: 12px
+        top: 6px
         display: block
         z-index: 15
-        background: darken(white, 3%)
-        transition: left .1s
-        color: darken(white, 50%)
-        border-radius: 50%
-        border: 1px solid darken(white, 30%)
-        box-shadow: 0 1px 6px rgba(0, 0, 0, .3)
         color: darken(white, 50%)
 
         i.fa
-          padding: 8px 16px
-          font-size: 24px
+          line-height: @width
           font-weight: bold
 
   .sidebar-tongue
@@ -229,3 +236,6 @@
     i.fa
       padding: 8px 0px 8px 16px
       font-weight: bold
+
+  .archive-board-confirm-wrapper
+    padding: 12px

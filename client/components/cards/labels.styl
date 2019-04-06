@@ -36,6 +36,7 @@
 .palette-colors
   display: flex
   flex-wrap: wrap
+  margin-bottom: 8px
 
   .palette-color
     flex-grow: 1
@@ -129,9 +130,10 @@
 .create-label
   .card-label
     float: left
-    height: 25px
-    margin: 0px 3% 7px 0px
-    width: 10.5%
+    width: 40px
+    height: @width
+    box-sizing: border-box
+    border-radius: 50%
     cursor: pointer
 
 .edit-labels
