@@ -340,8 +340,9 @@ template(name="setCardColorPopup")
         span.card-label.palette-color.js-palette-color(class="card-details-{{color}}")
           if(isSelected color)
             i.fa.fa-check
-    button.primary.confirm.js-submit {{_ 'save'}}
-    button.js-remove-color.negate.wide.right {{_ 'unset-color'}}
+    div.btn-container-clear
+      button.primary.confirm.js-submit {{_ 'save'}}
+      button.js-remove-color.negate.wide.right {{_ 'unset-color'}}
 
 template(name="cardDeletePopup")
   p {{_ "card-delete-pop"}}

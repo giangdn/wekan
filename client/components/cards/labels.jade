@@ -12,13 +12,15 @@ template(name="createLabelPopup")
   form.create-label
     with(color=defaultColor)
       +formLabel
-    button.primary.wide(type="submit") {{_ 'create'}}
+    div.btn-container-clear
+      button.primary.wide(type="submit") {{_ 'create'}}
 
 template(name="editLabelPopup")
   form.edit-label
     +formLabel
-    button.primary.wide.left(type="submit") {{_ 'save'}}
-    button.js-delete-label.negate.wide.right {{_ 'delete'}}
+    div.btn-container-clear
+      button.primary.wide.left(type="submit") {{_ 'save'}}
+      button.js-delete-label.negate.wide.right {{_ 'delete'}}
 
 template(name="deleteLabelPopup")
   p {{_ "label-delete-pop"}}

@@ -2,7 +2,7 @@
 
 // XXX Use .board-widget-labels as a flexbox container
 .card-label
-  border-radius: 4px
+  border-radius: 50%
   color: white  //Default white text, in select cases,  changed to black to improve contrast between label colour and text
   display: inline-block
   font-weight: 700
@@ -11,10 +11,11 @@
   margin-bottom: 5px
   padding: 3px 8px
   max-width: 100%
-  min-width: 8px
   overflow: ellipsis
-  height: 18px
-  vertical-align: bottom
+  height: 22px
+  width: 12px
+  vertical-align: middle
+  text-align: center
 
   &:hover
     color: white
@@ -31,12 +32,13 @@
       box-shadow: 0 0 0 2px darken(white, 60%) inset
 
     i.fa-plus
-      margin-top: 3px
+      line-height: 23px
 
 .palette-colors
-  display: flex
-  flex-wrap: wrap
-  margin-bottom: 8px
+  &:after
+    content: ' '
+    display: block
+    clear: both
 
   .palette-color
     flex-grow: 1

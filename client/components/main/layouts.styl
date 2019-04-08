@@ -376,6 +376,14 @@ a
   padding-top: 15px
 
 #calendar-view 
+  width: 100%
+  .fc-list-view
+    border: none
+    .fc-list-table 
+      border: none
+      .fc-widget-header
+        background-color: #d9e4ee
+
   .fc-bgevent-skeleton
     tbody
       background-color: transparent
@@ -389,6 +397,7 @@ a
       h2
         line-height: 32px
     .fc-state-default
+      font-weight: 500
       color: #ffffff
       background: #6772e5
       text-shadow: none
@@ -399,12 +408,19 @@ a
       border-radius: 3px
 
     .fc-button-group
+      button
+        border-left: solid 1px #4654de
       button:nth-child(1)
         border-top-left-radius: 3px
         border-bottom-left-radius: 3px
+        border-left-width: 0
       button:nth-last-child(1)
         border-top-right-radius: 3px
         border-bottom-right-radius: 3px
+    
+    button.fc-state-active
+      background-color: #4654de
+      
   .fc-view-container
     .fc-head-container 
       background: #d9e4ee
@@ -440,6 +456,14 @@ a
   #modal
     .modal-content
       width: 92%
+  #calendar-view 
+    .fc-toolbar.fc-header-toolbar
+      margin: 12px 
+      .fc-left, .fc-right, .fc-center
+        width: 100%
+        display: flex
+        justify-content: center
+        padding: 2px 0
 
 .inline-input
   height: 37px
