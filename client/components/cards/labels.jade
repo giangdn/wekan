@@ -37,4 +37,6 @@ template(name="cardLabelsPopup")
             if(isLabelSelected ../_id)
               i.card-label-selectable-icon.fa.fa-check
   if currentUser.isBoardAdmin
-    a.quiet-button.full.js-add-label {{_ 'label-create'}}
+    a.quiet-button.full.js-add-label
+      i.fa.fa-plus
+      {{_ 'label-create'}}

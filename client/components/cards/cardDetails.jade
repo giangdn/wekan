@@ -82,15 +82,16 @@ template(name="cardDetails")
           a.card-label.add-label.js-add-labels(title="{{_ 'card-labels-title'}}")
             i.fa.fa-plus
 
-    .card-details-items
-      each customFieldsWD
-        .card-details-item.card-details-item-customfield
-          h3.card-details-item-title
-            = definition.name
-          +cardCustomField
-
-    .card-details-items
-      if getSpentTime
+    if customFieldsWD
+      .card-details-items
+        each customFieldsWD
+          .card-details-item.card-details-item-customfield
+            h3.card-details-item-title
+              = definition.name
+            +cardCustomField
+    
+    if getSpentTime
+      .card-details-items
         .card-details-item.card-details-item-spent
           if getIsOvertime
             h3.card-details-item-title {{_ 'overtime-hours'}}

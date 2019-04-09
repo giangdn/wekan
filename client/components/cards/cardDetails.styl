@@ -24,13 +24,26 @@
   .card-details-canvas
     width: 470px
     padding-left: 20px;
+    
+    a.js-open-inlined-form
+      font-weight: 700
+      color: #6772e5
+      transition: 0.2s all
+      
+      &:hover
+        color: #2635da
+        
+      .viewer
+        font-weight: 500
+        color: #525f7f
 
   .card-details-header
     margin: 0 -20px 5px
     padding 10px 16px
+    color: #39476a
     // background: darken(white, 7%)
     background: #ffffff
-    border-bottom: 1px solid darken(white, 14%)
+    border-top: solid 6px #038bce
 
     .close-card-details,
     .card-details-menu
@@ -54,7 +67,6 @@
       font-size: 1.4em
       margin: 7px 0
       padding: 0
-      color: #39476a
 
     .linked-card-location
       font-style: italic
@@ -87,9 +99,20 @@
     display: flex
     flex-wrap: wrap
     margin: 15px 0
-
+    
     .card-details-item
       margin: 0 0.2em 1em
+      a
+        font-weight: 700
+        color: #6772e5
+        transition: 0.2s all
+        
+        &:hover
+          color: #2635da
+      a.js-edit-date,a.js-edit-time
+        color: white
+        font-weight: 500
+        
       &:last-child
         margin-right: 0
       &.card-details-item-labels,
@@ -107,9 +130,9 @@
     font-size: 14px
     color: #888888
 
-  .card-label
+  /* .card-label
     padding-top: 5px
-    padding-bottom: 5px
+    padding-bottom: 5px */
 
   .activities
     padding-top: 10px

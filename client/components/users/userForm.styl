@@ -20,9 +20,21 @@
     box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 2px 1px -1px rgba(0,0,0,0.12);
 
     .at-form
-
+      .at-error
+        color: #721c24
+        background-color: #f8d7da
+        padding: 10px 12px
+        border-radius: 3px
+        border:solid 1px #f5c6cb
+        margin-bottom: 12px
+    
       .at-link
-        color: darken(#27AE60, 40%)
+        color: #6772e5
+        text-decoration: none
+        transition: 0.2s all
+        
+        &:hover
+          color: #2635da
 
       label
         margin-bottom: 3px
@@ -34,6 +46,9 @@
         width: 100%
         // background: #216694
         background: #6772e5
+        font-size: 1.15em
+        font-weight: 500
+        padding: 10px
         color: #fff
 
       .at-title
@@ -83,7 +98,9 @@
 
     .auth-dialog
       width: calc(100% - 50px)
-      height: calc(100% - 50px)
+      height: auto
+      background: none
+      box-shadow: none
       padding: 25px
       min-height: 380px
       margin: 0px

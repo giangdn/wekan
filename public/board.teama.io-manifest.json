@@ -1,0 +1,22 @@
+{
+  "name": "TeamA Boards",
+  "short_name": "Boards",
+  "description": "TeamA Boards - Web application for team to manage tasks like Trello",
+  "lang": "en-US",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "type": "image/png",
+      "sizes": "60x60"
+    },
+    {
+      "src": "/teama-120.png",
+      "type": "image/png",
+      "sizes": "120x120"
+    }
+  ],
+  "display": "standalone",
+  "background_color": "#f6f9fc",
+  "theme_color": "#039be5",
+  "start_url": "/"
+}

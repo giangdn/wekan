@@ -29,12 +29,12 @@ template(name="checklistDetail")
 
         if canModifyCard
           h2.title.js-open-inlined-form.is-editable
-            +viewer
-              = checklist.title
+            i(class="fa fa-check-square")
+            = checklist.title
         else
           h2.title
-            +viewer
-                = checklist.title
+            i(class="fa fa-check-square")
+            = checklist.title
     +checklistItems(checklist = checklist)
 
 template(name="checklistDeleteDialog")

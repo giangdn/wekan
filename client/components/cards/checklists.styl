@@ -9,10 +9,10 @@ textarea.js-add-checklist-item, textarea.js-edit-checklist-item
 
 .delete-text
   color: #8c8c8c
-  text-decoration: underline
   word-wrap: break-word
   float: right
-  padding-top: 6px
+  padding: 6px 8px
+  line-height: 25px
   &:hover
     color: inherit
 
@@ -79,7 +79,33 @@ textarea.js-add-checklist-item, textarea.js-edit-checklist-item
   right: 0
 
 .checklist
-  background: darken(white, 3%)
+  background: white
+  border-radius: 3px
+  border: solid 1px #ededed
+  margin-bottom: 16px
+
+  .checklist-title
+    margin: 0
+    .title
+      font-weight: 500
+      font-size: 15px
+      background: #ededed
+      padding: 6px 8px
+      margin: 0
+
+  .checklist-items
+    padding: 8px 8px 12px
+    
+    .add-checklist-item
+      margin: 0
+      padding: 6px 8px
+      font-weight: 500 !important
+      color: #a6a6a6 !important
+      display: block
+      
+      &:hover
+        color: #666666 !important
+      
 
   &.placeholder
     background: darken(white, 20%)
@@ -93,25 +119,20 @@ textarea.js-add-checklist-item, textarea.js-edit-checklist-item
 
 
 .checklist-item
-  margin: 0 0 0 0.1em
+  margin: 0
   line-height: 18px
-  font-size: 1.1em
-  margin-top: 3px
+  padding: 6px 8px
+  border-radius: 4px
   display: flex
-  background: darken(white, 3%)
+  background: white
 
   &.placeholder
-    background: darken(white, 20%)
-    border-radius: 2px
 
   &.ui-sortable-helper
     box-shadow: -2px 2px 8px rgba(0, 0, 0, .3),
                 0 0 1px rgba(0, 0, 0, .5)
     transform: rotate(4deg)
     cursor: grabbing
-
-  &:hover
-    background-color: darken(white, 8%)
 
   .check-box
     margin: 0.1em 0 0 0;
@@ -124,7 +145,8 @@ textarea.js-add-checklist-item, textarea.js-edit-checklist-item
     padding-left: 10px;
     &.is-checked
       color: #8c8c8c
-      font-style: italic
+      text-decoration: line-through
+
     & .viewer
       p
         margin-bottom: 2px
@@ -133,7 +155,3 @@ textarea.js-add-checklist-item, textarea.js-edit-checklist-item
   margin: 0 0 0.5em 1.33em
   @extends .delete-text
   padding: 12px 0 0 0
-
-.add-checklist-item
-  margin: 0.2em 0 0.5em 1.33em
-  display: inline-block
