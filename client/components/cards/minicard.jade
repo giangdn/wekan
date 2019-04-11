@@ -64,6 +64,7 @@ template(name="minicard")
                 = trueValue
 
     if getMembers
+      hr
       .minicard-members.js-minicard-members
         each getMembers
           +userAvatar(userId=this)
