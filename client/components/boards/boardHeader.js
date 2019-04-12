@@ -84,18 +84,9 @@ BlazeComponent.extendComponent({
       'click .js-open-board-menu': Popup.open('boardMenu'),
       'click .js-change-visibility': Popup.open('boardChangeVisibility'),
       'click .js-watch-board': Popup.open('boardChangeWatch'),
+      'click .js-open-viewlist-view': Popup.open('boardViewList'),
       'click .js-open-archived-board'() {
         Modal.open('archivedBoards');
-      },
-      'click .js-toggle-board-view'() {
-        const currentUser = Meteor.user();
-        if (currentUser.profile.boardView === 'board-view-swimlanes') {
-          currentUser.setBoardView('board-view-cal');
-        } else if (currentUser.profile.boardView === 'board-view-lists') {
-          currentUser.setBoardView('board-view-swimlanes');
-        } else if (currentUser.profile.boardView === 'board-view-cal') {
-          currentUser.setBoardView('board-view-lists');
-        }
       },
       'click .js-toggle-sidebar'() {
         Sidebar.toggle();
@@ -201,6 +192,23 @@ const CreateBoard = BlazeComponent.extendComponent({
     Meteor.user().toggleBoardStar(this.boardId.get());
   }
 }).register('headerBarCreateBoardPopup');
+
+BlazeComponent.extendComponent({
+  events() {
+  	const currentUser = Meteor.user();
+    return [{
+    	'click .js-toggle-board-view-cal'() {
+      	currentUser.setBoardView('board-view-cal');
+      },
+			'click .js-toggle-board-view-lists'() {
+      	currentUser.setBoardView('board-view-lists');
+      },
+			'click .js-toggle-board-view-swimlanes'() {
+      	currentUser.setBoardView('board-view-swimlanes');
+      },
+    }];
+  },
+}).register('boardViewListPopup');
 
 BlazeComponent.extendComponent({
   visibilityCheck() {
