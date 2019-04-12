@@ -118,7 +118,7 @@ BlazeComponent.extendComponent({
           drop(event, ui) {
             const cardId = Blaze.getData(this)._id;
             const card = Cards.findOne(cardId);
-
+						console.log(cardId);
             if (ui.draggable.hasClass('js-member')) {
               const memberId = Blaze.getData(ui.draggable.get(0)).userId;
               card.assignMember(memberId);
