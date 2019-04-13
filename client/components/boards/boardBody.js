@@ -264,7 +264,7 @@ BlazeComponent.extendComponent({
   calendarOptions() {
     return {
       id: 'calendar-view',
-      defaultView: 'agendaDay',
+      defaultView: 'month',
       editable: true,
       timezone: 'local',
       header: {

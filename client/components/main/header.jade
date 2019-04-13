@@ -25,7 +25,7 @@ template(name="header")
               span.fa.fa-home
               | {{_ 'all-boards'}}
           each currentUser.starredBoards
-            li.separator -
+            li.separator ●
             li(class="{{#if $.Session.equals 'currentBoard' _id}}current{{/if}}")
               a(href="{{pathFor 'board' id=_id slug=slug}}")
                 = title

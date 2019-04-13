@@ -190,14 +190,14 @@
 
 @media screen and (max-width: 800px)
   .list-header-menu
-    margin-right: 30px
+    margin-right: 8px
+    padding-top: 8px !important
 
   .mini-list
-    // flex: 0 0 60px
-    // height: 60px
     width: 100%
     border-left: 0px
     border-bottom: 1px solid darken(white, 20%)
+    background-color: #ffffff
     .list-header
       box-shadow: none
       margin-bottom: 0
@@ -205,10 +205,19 @@
 
   .list
     display: block
-    // width: 100%
     border-left: 0px
     flex: none
-    padding-bottom: 12px
+    margin: 0
+    border-width: 0
+    border-radius: 0
+    
+    .list-body
+      padding: 8px 16px 16px
+    
+    .list-header-add
+      background: #ffffff
+      border-bottom: solid 1px #cccccc
+      padding: 16px 12px
 
     &.ui-sortable-helper
       flex: 0 0 60px
