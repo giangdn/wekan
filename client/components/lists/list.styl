@@ -29,7 +29,13 @@
       font-size: 12px
       line-height: 12px
       text-align: center
-      border: solid 1px #e4e8f4
+      border: solid 1px darken(#e3e6f5, 5%)
+      transition: all 0.2s
+      
+      &:hover
+        background: #ffffff
+        color: #6772e5
+        border-color: #6772e5
 
   &:first-child
     // margin-left: 5px
@@ -66,7 +72,7 @@
 
 .list-header-add
   flex: 0 0 auto
-  padding: 20px 12px 4px
+  padding: 20px 12px
   position: relative
   min-height: 20px
 
@@ -147,14 +153,18 @@
     position: relative
     text-decoration: none
     animation: fadeIn 0.3s
+    transition: all 0.2s
 
     i.fa
-      margin-right: 7px
+      margin-right: 6px
+      transition: all 0.2s
 
     &:hover
-      background: #fafafa
-      color: #222
-      // box-shadow: 0 1px 2px rgba(0,0,0,.2)
+      background: #ffffff
+      color: #6772e5
+      
+      i.fa
+        color: #6772e5
 
 #js-wip-limit-edit
   padding-top: 2%

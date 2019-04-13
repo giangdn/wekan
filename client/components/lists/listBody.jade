@@ -50,15 +50,13 @@ template(name="addCardForm")
     unless currentBoard.isTemplatesBoard
       unless currentBoard.isTemplateBoard
         span.quiet
-          | {{_ 'or'}}
+          | &nbsp;
           a.js-link {{_ 'link'}}
         span.quiet
-          | &nbsp;
-          | /
+          | ●
           a.js-search {{_ 'search'}}
         span.quiet
-          | &nbsp;
-          | /
+          | ●
           a.js-card-template {{_ 'template'}}
 
 template(name="autocompleteLabelLine")
