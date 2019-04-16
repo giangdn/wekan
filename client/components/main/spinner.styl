@@ -16,8 +16,8 @@
  */
 
 .sk-spinner {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 16px;
   margin: auto;
   text-align: center;
   font-size: 10px;
@@ -25,7 +25,9 @@
   div {
     background-color: #333;
     height: 100%;
-    width: 6px;
+    width: 12px;
+    margin: 2px;
+    border-radius: 50%;
     display: inline-block;
 
     animation: sk-waveStretchDelay 1.2s infinite ease-in-out;
@@ -38,6 +40,6 @@
 }
 
 @keyframes sk-waveStretchDelay {
-  0%, 40%, 100% { transform: scaleY(0.4) }
-  20% { transform: scaleY(1.0) }
+  0%, 40%, 100% { transform: scale(0.4) }
+  20% { transform: scale(1.0) }
 }
