@@ -29,7 +29,7 @@ function wekan_repo_check(){
       # Production: https://example.com/wekan
       # Local: http://localhost:2000
       #export ipaddress=$(ifdata -pa eth0)
-      export ROOT_URL='http://localhost:2000'
+      export ROOT_URL='http://board.teama.me'
       #---------------------------------------------
       # https://github.com/wekan/wekan/wiki/Troubleshooting-Mail
       # https://github.com/wekan/wekan-mongodb/blob/master/docker-compose.yml
