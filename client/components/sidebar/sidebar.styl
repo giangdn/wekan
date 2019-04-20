@@ -26,14 +26,18 @@
     left: 0
     overflow-x: hidden
     overflow-y: auto
-    
+    .minicard-wrapper
+      margin: 16px 0 8px
+
+    .minicard
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 2px 1px -1px
+
     .list-body
-      padding: 0
-      .minicard
-        border: solid 1px #ced4da
-        
-        hr
-          margin: 5px -14px
+      padding: 8px
+      margin: 0 -8px
+
+      hr
+        margin: 5px -14px
 
     .js-member-invite-accept,
     .js-member-invite-decline
@@ -129,6 +133,14 @@
     line-height: 1.6em
     vertical-align: middle
     color: darken(white, 40%)
+    
+  .basicTabs-container .tabs-list .tab-item.active
+    border-top-left-radius: 8px
+    border-top-right-radius: 8px
+    padding: 9px 12px !important
+  .basicTabs-container .tabs-list .tab-item, .dynamicTabs-container .tabs-list .tab-item
+    padding: 8px 12px
+
 .board-subtask-settings
   .subtask-settings-list
     margin-bottom: 8px
@@ -139,7 +151,7 @@
       margin: 12px -10px
     
 .board-sidebar
-  width: 248px
+  width: 360px
   right: -@width
   transition: top .1s, right .1s, width .1s
 
@@ -192,6 +204,7 @@
   border-top: 1px solid darken(white, 20%)
   clear: both
   padding: 5px 0
+  line-height: 34px
   
   .board-header-btns
     font-size: 1.2em
@@ -203,10 +216,13 @@
 
   button
     float: right
-    margin: 0 0 5px 5px
+    margin: 0
     font-size: 12px
     padding: 6px 12px
     font-weight: 500
+    
+    i.fa
+      margin: 0
 
 @media screen and (max-width: 800px)
   .board-sidebar

@@ -10,11 +10,12 @@
   // transparent, because that won't work during a list drag.
   // background: darken(white, 13%)
   // background: #f6f9fc
-  background: #f0f3fc
+  // background: #f0f3fc
+  background: #e9f3fe
   margin: 16px 8px
   border-radius: 8px
   // border-left: 1px solid darken(white, 20%)
-  border: solid 1px darken( #f0f3fc, 2%) //#ecf3fc
+  border: solid 1px darken( #e9f3fe, 3%) //#ecf3fc
   padding: 0
   float: left
   overflow: hidden
@@ -25,11 +26,11 @@
       height: 12px
       padding: 4px
       border-radius: 50%
-      background: #e3e6f5
+      background: darken( #e9f3fe, 3%)
       font-size: 12px
       line-height: 12px
       text-align: center
-      border: solid 1px darken(#e3e6f5, 5%)
+      border: solid 1px darken(#e9f3fe, 10%)
       transition: all 0.2s
       
       &:hover
@@ -82,9 +83,11 @@
   // margin-bottom: 10px
   position: relative
   min-height: 20px
+  border-top-left-radius: 7px
+  border-top-right-radius: 7px
   // background-color: #e4e4e4;
   // background-color: #ffffff
-  border-top: 4px solid #EFF1F7
+  border-top: 4px solid #e9f3fe
   // box-shadow: 4px 1px 8px -2px rgba(0,0,0,0.2), 0px 3px 3px -2px rgba(0,0,0,0.14), 0px 3px 4px 0px rgba(0,0,0,0.12)
 
 
@@ -95,10 +98,13 @@
     display: none
 
   .list-header-name
-    display: inline
+    display: inline-block
+    margin: 0
+    vertical-align: middle
+    max-width: calc(100% - 60px)
+    white-space: nowrap
     font-size: 16px
     line-height: 17px
-    margin: 0
     // font-weight: bold
     min-height: 9px
     min-width: 30px
@@ -111,8 +117,9 @@
 
   .list-header-watch-icon
     padding-left: 10px
-    color: #a6a6a6
-
+    color: #039be5
+    font-size: 1.2em
+    vertical-align: middle
 
   .list-header-menu
     position: absolute
@@ -123,7 +130,7 @@
 
   .list-header-plus-icon
     color: #a6a6a6
-    margin-right: 10px
+    margin-right: 8px
 
   .highlight
     color: #ce1414
@@ -191,7 +198,7 @@
 @media screen and (max-width: 800px)
   .list-header-menu
     margin-right: 8px
-    padding-top: 8px !important
+    padding-top: 12px !important
 
   .mini-list
     width: 100%
@@ -237,15 +244,22 @@
       border-bottom: 1px solid darken(white, 20%)
 
   .list-header
-
+    border-radius: 0
+    .list-header-name
+      display: inline-block
+      max-width: calc(100% - 88px)
+      margin-right: 0
+      line-height: 22px
+      &.is-editable
+        line-height: 30px
+        vertical-align: middle
+        
     .list-header-left-icon
       display: inline
-      padding: 7px
+      padding: 4px
       padding-right: 16px
-      // margin-top: 1px
-      top: -@padding
-      left: -@padding
       font-size: 22px
+      vertical-align: middle
 
     .list-header-menu-icon
       position: absolute

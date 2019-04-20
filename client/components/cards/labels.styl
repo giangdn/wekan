@@ -5,17 +5,18 @@
   border-radius: 50%
   color: white  //Default white text, in select cases,  changed to black to improve contrast between label colour and text
   display: inline-block
-  font-weight: 700
-  font-size: 13px
+  font-size: 1em
+  line-height: 22px
+  height: 22px
   margin-right: 4px
   margin-bottom: 5px
   padding: 3px 8px
   max-width: 100%
   overflow: ellipsis
-  height: 22px
   width: 12px
   vertical-align: middle
-  text-align: center
+  text-align: left
+  transition: all 0.2s
 
   &:hover
     color: white
@@ -54,11 +55,11 @@
 
 .card-label-yellow
   background-color: #fad900
-  color: #000000 //Black text for better visibility
+  color: #ffffff //Black text for better visibility
 
 .card-label-orange
   background-color: #ff9f19
-  color: #000000 //Black text for better visibility
+  color: #ffffff //Black text for better visibility
 
 .card-label-red
   background-color: #eb4646
@@ -71,7 +72,7 @@
 
 .card-label-pink
   background-color: #ff78cb
-  color: #000000 //Black text for better visibility
+  color: #ffffff //Black text for better visibility
 
 .card-label-sky
   background-color: #00c2e0
@@ -81,7 +82,7 @@
 
 .card-label-lime
   background-color: #51e898
-  color: #000000 //Black text for better visibility
+  color: #ffffff //Black text for better visibility
 
 .card-label-silver
   background-color: #c0c0c0
@@ -175,15 +176,16 @@
   margin-bottom: 4px
   width: 180px
   min-height: 18px
+  height: 18px
+  line-height: 18px
   padding: 8px
   position: relative
-  text-align: right
-  transition: margin-right .1s
 
   .card-label-selectable-icon
     color: white
-    font-size: 20px
+    font-size: 18px
     margin-right: -24px
+    float: right
 
   &.active:hover,
   &.active,
@@ -211,7 +213,9 @@
   float: right
   padding: 8px
   border: solid 1px #eeeeee
-  font-size: 20px
+  font-size: 1.1em
+  line-height: 1.1em
+  transition: all 0.2s
 
   &:hover
     background: #dbdbdb
