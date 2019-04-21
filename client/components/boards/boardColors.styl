@@ -47,7 +47,8 @@ setBoardColor(color)
 
   .is-multiselection-active .multi-selection-checkbox
     &.is-checked + .minicard
-      background: lighten(color, 90%)
+      transition: all 0.2s
+      border: solid 2px #039be5
 
     &:not(.is-checked) + .minicard:hover:not(.minicard-composer)
       background: lighten(color, 97%)

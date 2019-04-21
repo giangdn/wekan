@@ -46,8 +46,7 @@
     border-left: none
 
   &.ui-sortable-helper
-    box-shadow: -2px 2px 8px rgba(0, 0, 0, .3),
-                0 0 1px rgba(0, 0, 0, .5)
+    box-shadow: -2px 2px 8px rgba(0, 0, 0, .3), 0 0 1px rgba(0, 0, 0, .5)
     transform: rotate(4deg)
     cursor: grabbing
 
@@ -79,7 +78,7 @@
 
 .list-header
   flex: 0 0 auto
-  padding: 10px 12px 14px
+  padding: 6px 12px 10px
   // margin-bottom: 10px
   position: relative
   min-height: 20px
@@ -89,7 +88,15 @@
   // background-color: #ffffff
   border-top: 4px solid #e9f3fe
   // box-shadow: 4px 1px 8px -2px rgba(0,0,0,0.2), 0px 3px 3px -2px rgba(0,0,0,0.14), 0px 3px 4px 0px rgba(0,0,0,0.12)
-
+  
+  .wip-limit-badge
+    background: #ffffff
+    border-radius: 4px
+    padding: 3px 4px
+    display: inline-block
+    font-size: 0.9em
+    border: solid 1px darken( #e9f3fe, 3%)
+    font-weight: 600
 
   &.ui-sortable-handle
     cursor: grab
@@ -210,6 +217,11 @@
       margin-bottom: 0
       border-top-color: #ffffff
 
+      .list-header-name
+        .wip-limit-badge
+          background-color: #e9f3fe
+          line-height: 22px
+
   .list
     display: block
     border-left: 0px
@@ -253,7 +265,8 @@
       &.is-editable
         line-height: 30px
         vertical-align: middle
-        
+      .wip-limit-badge
+         line-height: 22px
     .list-header-left-icon
       display: inline
       padding: 4px
@@ -267,6 +280,7 @@
       // top: -@padding
       right: 18px
       font-size: 22px
+      line-height: 30px
 
 .link-board-wrapper
   display: flex
