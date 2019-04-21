@@ -199,12 +199,15 @@ BlazeComponent.extendComponent({
     return [{
     	'click .js-toggle-board-view-cal'() {
       	currentUser.setBoardView('board-view-cal');
+      	Popup.close();
       },
 			'click .js-toggle-board-view-lists'() {
       	currentUser.setBoardView('board-view-lists');
+      	Popup.close();
       },
 			'click .js-toggle-board-view-swimlanes'() {
       	currentUser.setBoardView('board-view-swimlanes');
+      	Popup.close();
       },
     }];
   },

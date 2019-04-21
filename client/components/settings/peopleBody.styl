@@ -1,15 +1,17 @@
 .main-body
-  overflow: scroll;
+  overflow: scroll
 
 table
-  border-collapse: collapse;
-  width: 100%;
-  // color: #000;
+  border-collapse: collapse
+  width: 100%
 
   td, th
-    border: 1px solid #d2d0d0;
-    text-align: left;
-    padding: 8px;
+    border: solid 1px darken( #e9f3fe, 10%)
+    text-align: left
+    padding: 8px
 
   tr:nth-child(even)
-    background-color: rgba(236, 239, 241, .26);
+    background-color: rgba(236, 239, 241, .26)
+
+.fc-unthemed th, .fc-unthemed td, .fc-unthemed thead, .fc-unthemed tbody, .fc-unthemed .fc-divider, .fc-unthemed .fc-row, .fc-unthemed .fc-content, .fc-unthemed .fc-popover, .fc-unthemed .fc-list-view, .fc-unthemed .fc-list-heading td
+  border-color: darken( #e9f3fe, 10%)

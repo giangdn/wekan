@@ -389,8 +389,13 @@ a
 #calendar-view 
   width: 100%
   height: 100%
+  background-color: #ffffff
   .fc-list-empty
     padding: 16px 
+    background-color: #fff3cd
+    border: solid 1px #ffeeba
+    color: #856404
+    border-radius: 4px
 
   .fc-event
     background-color: #039be5
@@ -408,16 +413,16 @@ a
       height: 100% !important
     .fc-list-table
       border: none
-      border-bottom: solid 1px #dddddd
+      border-bottom: solid 1px darken( #e9f3fe, 10%)
       .fc-widget-header
-        background-color: #d9e4ee
+        background-color: #e9f3fe
         color: #525f7f
         // font-weight: 500
         padding: 8px 14px
         padding-left: 8px
         border-top-width: 1px
         border-bottom-width: 1px
-        border-color: #ccc
+        border-color: darken( #e9f3fe, 10%)
 
   .fc-bgevent-skeleton
     tbody
@@ -458,10 +463,10 @@ a
       
   .fc-view-container
     height: 100%
-    padding: 16px
+    padding: 0 16px 16px
     box-sizing: border-box
     .fc-head-container 
-      background: #d9e4ee
+      background: #e9f3fe
       table
         margin-bottom: 0
         thead
@@ -535,3 +540,16 @@ a
   > .ps-scrollbar-y-rail
     > .ps-scrollbar-y
       width: 5px
+
+@media screen and (max-width: 320px)
+  #calendar-view
+    .fc-today-button
+      display: none
+      visibility: hidden
+    .fc-button-group
+      margin-left: 0.2em !important
+      margin-right: 0.2em !important
+      button
+        font-size: 0.86em !important
+        padding-left: 5px
+        padding-right: 5px
