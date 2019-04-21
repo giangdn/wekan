@@ -1,6 +1,6 @@
 const subManager = new SubsManager();
 const { calculateIndex, enableClickOnTouch } = Utils;
-const swimlaneWhileSortingHeight = 150;
+const swimlaneWhileSortingHeight = 200;
 
 BlazeComponent.extendComponent({
   onCreated() {
