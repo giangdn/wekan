@@ -15,6 +15,17 @@
   transition: flex-basis 0.1s
   margin-left: -9px
 
+  h3.medium-title
+    font-size: 16px
+    line-height: 1.25em
+    margin: 0 -4px 12px
+    color: #525f7f
+    .fa
+      margin-right: 4px
+  hr
+    margin: 16px -20px
+    width: auto
+
   .mCustomScrollBox
     padding-left: 0
 
@@ -27,16 +38,27 @@
     padding-left: 20px;
     
     a.js-open-inlined-form
-      font-weight: 500
-      color: #6772e5
+      color: #a6a6a6
       transition: 0.2s all
       
       &:hover
         color: #2635da
+        .fa
+          color: #2635da
         
       .viewer
-        font-weight: 500
         color: #525f7f
+        background: #e9f3fe
+        transition: all 0.2s
+        &:hover
+          background: darken(#e9f3fe, 3%)
+          color: darken(#525f7f, 5%)
+      .medium-text
+        color: #6772e5
+      .card-details-item-customfield
+        a
+          color: #6772e5
+          font-size: 1em
 
   .card-details-header
     margin: 0 -20px 5px
@@ -108,17 +130,14 @@
     .card-details-item
       margin: 0 0.2em 1em
       a
-        font-weight: 500
-        color: #6772e5
+        color: #a6a6a6
         transition: 0.2s all
         
         &:hover
           color: #2635da
-      a.js-edit-date,a.js-edit-time
+      .card-date
         color: white
-        font-weight: 500
         display: inline-block
-        
       &:last-child
         margin-right: 0
       &.card-details-item-labels,
@@ -134,11 +153,16 @@
 
   .card-details-item-title
     font-size: 14px
-    color: #888888
+    font-weight: 500
 
   /* .card-label
     padding-top: 5px
     padding-bottom: 5px */
+  .card-label-first-letter 
+    text-algin: center
+    font-size: 0
+    &:first-letter
+      font-size: 1em !important
 
   .activities
     padding-top: 10px

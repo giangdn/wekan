@@ -29,6 +29,8 @@ template(name="cardCustomField-text")
                     +viewer
                         = value
                 else
+                  span
+                    i.fa.fa-pencil-square-o
                     | {{_ 'edit'}}
 
 template(name="cardCustomField-number")
@@ -43,6 +45,8 @@ template(name="cardCustomField-number")
                 if value
                     = value
                 else
+                  span
+                    i.fa.fa-pencil-square-o
                     | {{_ 'edit'}}
 
 template(name="cardCustomField-date")
@@ -53,6 +57,8 @@ template(name="cardCustomField-date")
                     time(datetime="{{showISODate}}")
                         | {{showDate}}
             else
+              span
+                i.fa.fa-pencil-square-o
                 | {{_ 'edit'}}
 
 template(name="cardCustomField-dropdown")
@@ -73,4 +79,6 @@ template(name="cardCustomField-dropdown")
                     +viewer
                         = selectedItem
                 else
+                  span
+                    i.fa.fa-pencil-square-o
                     | {{_ 'edit'}}

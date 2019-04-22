@@ -10,11 +10,15 @@
     text-align: center
     border-radius: 3px
     overflow: hidden
-    background: darken(white, 7%)
+    background: #e9f3fe
     min-height: 120px
+    position: relative
+    transition: all 0.2s
 
     &:hover
-      background: darken(white, 12%)
+      background: darken(#e9f3fe, 10%)
+      .attachment-details-actions
+        display: flex !important
 
     &.add-attachment
       display: flex
@@ -23,6 +27,11 @@
       a
         display: block
         margin: auto
+        .fa
+          display: block
+          font-size: 26px
+          color: #525f7f
+          margin-bottom: 6px
 
     .attachment-thumbnail
       height: 80px
@@ -34,6 +43,7 @@
       .attachment-thumbnail-img
         max-height: 100%
         max-width: 100%
+        width: 100%
 
       .attachment-thumbnail-ext
         text-transform: uppercase
@@ -42,9 +52,26 @@
     .attachment-details
       font-size: 0.75em
       margin: 3px
-
-      .attachment-details-actions a
-        display: block
+      .attachment-details-actions
+        display: none
+        position: absolute
+        bottom: 1px
+        left: 1px
+        right: 1px
+        background-color: #ffffff
+        border-bottom-left-radius: 3px
+        border-bottom-right-radius: 3px
+        overflow: hidden
+        a
+          flex-grow: 1
+          padding: 3px 1px
+          text-decoration: none
+          transition: all 0.2s
+          &:hover
+            background-color: #6772e5
+            color: #ffffff
+            .fa
+              color: #ffffff
 
 .attachment-image-preview
   max-width: 100px

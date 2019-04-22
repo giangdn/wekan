@@ -11,10 +11,14 @@ textarea.js-add-checklist-item, textarea.js-edit-checklist-item
   color: #8c8c8c
   word-wrap: break-word
   float: right
-  padding: 6px 8px
-  line-height: 25px
+  padding: 4px 8px
+  background: #ededed
+  border-radius: 2px
+  line-height: 1.25em
+  transition: all 0.2s
   &:hover
-    color: inherit
+    color: #6772e5
+    background: #e0e0e0
 
 .checklist-title
   .checkbox
@@ -80,8 +84,8 @@ textarea.js-add-checklist-item, textarea.js-edit-checklist-item
 
 .checklist
   background: white
-  border-radius: 3px
-  border: solid 1px #ededed
+  // border-radius: 3px
+  // border: solid 1px darken(#e9f3fe, 8%)
   margin-bottom: 16px
 
   .checklist-title
@@ -89,7 +93,7 @@ textarea.js-add-checklist-item, textarea.js-edit-checklist-item
     .title
       font-weight: 500
       font-size: 15px
-      background: #ededed
+      background: #e9f3fe
       padding: 6px 8px
       margin: 0
 
@@ -99,7 +103,6 @@ textarea.js-add-checklist-item, textarea.js-edit-checklist-item
     .add-checklist-item
       margin: 0
       padding: 6px 8px
-      font-weight: 500 !important
       color: #a6a6a6 !important
       display: block
       
