@@ -46,3 +46,26 @@ template(name="boardListHeaderBar")
     a.board-header-btn(href="{{pathFor 'board' id=templatesBoardId slug=templatesBoardSlug}}")
       i.fa.fa-clone
       span {{_ 'templates'}}
+
+template(name="boardListHeaderPopup")
+  ul.pop-over-list.list-change-home-view
+    li
+      a.js-toggle-home-view-boards
+        i.fa.fa-th
+        span {{_ 'home-view-boards'}}
+    li
+      a.js-toggle-home-view-teams
+        i.fa.fa-user-circle-o
+        span {{_ 'home-view-teams'}}
+    li
+      a.js-toggle-home-view-activities
+        i.fa.fa-comments-o
+        span {{_ 'home-view-activities'}}
+    li
+      a.js-toggle-home-view-reports
+        i.fa.fa-pie-chart
+        span {{_ 'home-view-reports'}}
+    li
+      a.js-toggle-home-view-files
+        i.fa.fa-file-pdf-o
+        span {{_ 'home-view-files'}}
