@@ -683,5 +683,11 @@
     "error-undefined": "Something went wrong",
     "error-ldap-login": "An error occurred while trying to login",
     "display-authentication-method": "Display Authentication Method",
-    "default-authentication-method": "Default Authentication Method"
+    "default-authentication-method": "Default Authentication Method",
+    "homeListHeaderPopup-title": "Hiển Thị",
+    "home-view": "Chọn hiển thị",
+    "home-view-teams": "Các nhóm",
+    "home-view-activities": "Các hoạt động",
+    "home-view-files": "Các tập tin",
+    "home-view-reports": "Thống kê báo cáo"
 }
