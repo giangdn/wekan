@@ -685,5 +685,11 @@
     "error-undefined": "Something went wrong",
     "error-ldap-login": "An error occurred while trying to login",
     "display-authentication-method": "Display Authentication Method",
-    "default-authentication-method": "Default Authentication Method"
+    "default-authentication-method": "Default Authentication Method",
+    "homeListHeaderPopup-title": "Switch View",
+    "home-view": "Switch view",
+    "home-view-teams": "Teams",
+    "home-view-activities": "Activities",
+    "home-view-files": "Uploaded Files",
+    "home-view-reports": "Reports"
 }
