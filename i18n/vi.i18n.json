@@ -218,7 +218,7 @@
     "no-comments-desc": "Không thể xem bình luận và hoạt động",
     "computer": "Từ máy tính",
     "confirm-subtask-delete-dialog": "Are you sure you want to delete subtask?",
-    "confirm-checklist-delete-dialog": "Are you sure you want to delete checklist?",
+    "confirm-checklist-delete-dialog": "Bạn có chắc muốn xóa danh sách việc cần làm",
     "copy-card-link-to-clipboard": "Copy card link to clipboard",
     "linkCardPopup-title": "Link Card",
     "searchElementPopup-title": "Tìm kiếm",

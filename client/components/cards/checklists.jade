@@ -1,11 +1,7 @@
 template(name="checklists")
-  //h3.medium-title
-    //i.fa.fa-list-alt 
-    //{{ _ 'checklists'}} 
-    if toggleDeleteDialog.get
-      .board-overlay#card-details-overlay
-      +checklistDeleteDialog(checklist = checklistToDelete)
-
+  if toggleDeleteDialog.get
+    .board-overlay#card-details-overlay
+    +checklistDeleteDialog(checklist = checklistToDelete)
 
   .card-checklist-items
     each checklist in currentCard.checklists
@@ -41,15 +37,16 @@ template(name="checklistDetail")
 
 template(name="checklistDeleteDialog")
   .js-confirm-checklist-delete
-    p
-      i(class="fa fa-exclamation-triangle" aria-hidden="true")
-    p
-      | {{_ 'confirm-checklist-delete-dialog'}}
-      span {{checklist.title}}
-      | ?
-    .js-checklist-delete-buttons
-      button.confirm-checklist-delete(type="button") {{_ 'delete'}}
-      button.toggle-delete-checklist-dialog(type="button") {{_ 'cancel'}}
+    h3.header-title
+      | {{_ "delete"}}
+    div.dialog-contain
+      p
+        | {{_ 'confirm-checklist-delete-dialog'}}
+        span {{checklist.title}}
+        | ?
+      .js-checklist-delete-buttons
+        button.btn-danger.confirm-checklist-delete(type="button") {{_ 'delete'}}
+        button.toggle-delete-checklist-dialog(type="button") {{_ 'cancel'}}
 
 template(name="addChecklistItemForm")
   textarea.js-add-checklist-item(rows='1' autofocus)

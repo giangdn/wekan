@@ -138,7 +138,7 @@ button
 
   &:hover,
   &:focus
-    background: #4654DE !important
+    background: #4654DE
     // background: linear-gradient(#c2c2c2, #b5b5b5)
 
   &:active
@@ -167,14 +167,12 @@ button
   &.negate
     &:hover,
     &:focus
-      background: #990f0f
-      background: linear-gradient(#990f0f, #7d0c0c)
-      box-shadow: 0 1px 0 #4d4d4d
       color: #fff
+      background-color: #c82333
+      border-color: #bd2130
 
     &:active
       background: #7d0c0c
-      box-shadow: 0 1px 0 #4d4d4d
       color: #fff
 
   i.fa
@@ -707,7 +705,13 @@ button
   margin: 0 0.5em
   display: flex
 
-
+.btn-danger
+  color: #fff
+  background-color: #dc3545
+  border-color: #dc3545
+  &:hover
+    background-color: #c82333
+    border-color: #bd2130
 @media screen and (max-width: 800px)
   .edit-controls,
   .add-controls
