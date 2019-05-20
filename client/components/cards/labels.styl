@@ -18,6 +18,10 @@
   text-align: left
   transition: all 0.2s
 
+  &.card-label-auto
+      width: auto
+      border-radius: 3px
+
   &:hover
     color: white
 
@@ -28,9 +32,12 @@
 
   &.add-label
     box-shadow: 0 0 0 2px darken(white, 25%) inset
+    color: darken(white, 25%)
+    transition: all 0.2s
 
     &:hover, &.is-active
       box-shadow: 0 0 0 2px darken(white, 60%) inset
+      color: darken(white, 60%)
 
     i.fa-plus
       line-height: 23px

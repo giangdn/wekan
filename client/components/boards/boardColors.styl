@@ -24,7 +24,7 @@ setBoardColor(color)
   .sidebar-list li a:hover
     background-color: lighten(color, 10%)
 
-  &#header ul li.current, 
+  &#header ul li.current,
   &#header-quick-access ul li.current,
   &#header-quick-access ul li:hover
     border-bottom: 2px solid lighten(color, 10%)
@@ -51,6 +51,7 @@ setBoardColor(color)
     &.is-checked + .minicard
       transition: all 0.2s
       border: solid 2px #039be5
+      padding: 10px
 
     &:not(.is-checked) + .minicard:hover:not(.minicard-composer)
       background: lighten(color, 97%)

@@ -193,9 +193,9 @@ template(name="labelsWidget")
       | {{_ 'labels'}}
     .board-widget-content
       each currentBoard.labels
-          a.card-label(class="card-label-{{color}}"
-            class="{{#if currentUser.isNotCommentOnly}}js-label{{/if}}")
-            span.card-label-name= name
+        a.card-label(class="card-label-{{color}} card-label-auto"
+          class="{{#if currentUser.isNotCommentOnly}}js-label{{/if}}")
+          span.card-label-name= name
       if currentUser.isBoardAdmin
         a.card-label.add-label.js-add-label
           i.fa.fa-plus
