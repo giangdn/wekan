@@ -7,7 +7,7 @@ template(name="listHeader")
     else
       if isMiniScreen
         if currentList
-          a.list-header-left-icon.fa.fa-angle-left.js-unselect-list
+          a.list-header-left-icon.far.fa-angle-left.js-unselect-list
       h2.list-header-name(
         class="{{#if currentUser.isBoardMember}}js-open-inlined-form is-editable{{/if}}")
         if wipLimit.enabled
@@ -22,29 +22,29 @@ template(name="listHeader")
       if isMiniScreen
         if currentList
           if isWatching
-            i.list-header-watch-icon.fa.fa-eye
+            i.list-header-watch-icon.far.fa-eye
           div.list-header-menu
             unless currentUser.isCommentOnly
               if canSeeAddCard
-                a.js-add-card.fa.fa-plus.list-header-plus-icon
-              a.fa.fa-navicon.js-open-list-menu
+                a.js-add-card.far.fa-plus.list-header-plus-icon
+              a.far.fa-navicon.js-open-list-menu
         else
-          a.list-header-menu-icon.fa.fa-angle-right.js-select-list
+          a.list-header-menu-icon.far.fa-angle-right.js-select-list
       else if currentUser.isBoardMember
         if isWatching
-          i.list-header-watch-icon.fa.fa-eye
+          i.list-header-watch-icon.far.fa-eye
         div.list-header-menu
           unless currentUser.isCommentOnly
             if canSeeAddCard
-              a.js-add-card.fa.fa-plus.list-header-plus-icon
-            a.fa.fa-ellipsis-h.js-open-list-menu
+              a.js-add-card.far.fa-plus.list-header-plus-icon
+            a.far.fa-ellipsis-h.js-open-list-menu
 
 template(name="editListTitleForm")
   .list-composer
     input.list-name-input.full-line(type="text" value=title autofocus)
     .edit-controls.clearfix
       button.primary.confirm(type="submit") {{_ 'save'}}
-      a.fa.fa-times-thin.js-close-inlined-form
+      a.far.fa-times-thin.js-close-inlined-form
 
 template(name="listActionPopup")
   ul.pop-over-list
@@ -82,7 +82,7 @@ template(name="listMorePopup")
     span.clearfix
       span {{_ 'link-list'}}
       = ' '
-      i.fa.colorful(class="{{#if board.isPublic}}fa-globe{{else}}fa-lock{{/if}}")
+      i.far.colorful(class="{{#if board.isPublic}}fa-globe{{else}}fa-lock{{/if}}")
       input.inline-input(type="text" readonly value="{{ rootUrl }}")
     | {{_ 'added'}}
     span.date(title=list.createdAt) {{ moment createdAt 'LLL' }}
@@ -100,7 +100,7 @@ template(name="setWipLimitPopup")
     ul.pop-over-list
       li: a.js-enable-wip-limit {{_ 'enable-wip-limit'}}
         if isWipLimitEnabled
-          i.fa.fa-check
+          i.far.fa-check
     if isWipLimitEnabled
       p
         input.wip-limit-value(type="number" value="{{ wipLimitValue }}" min="1" max="99")
@@ -123,7 +123,7 @@ template(name="setListColorPopup")
       // note: we use the swimlane palette to have more than just the border
       span.card-label.palette-color.js-palette-color(class="swimlane-{{color}}")
         if(isSelected color)
-          i.fa.fa-check
+          i.far.fa-check
     div.btn-container-clear
       button.primary.confirm.js-submit {{_ 'save'}}
       button.js-remove-color.negate.wide.right {{_ 'unset-color'}}

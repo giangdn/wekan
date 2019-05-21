@@ -10,7 +10,7 @@ template(name="header")
         ul
           li
             a(href="{{pathFor 'home'}}")
-              span.fa.fa-home
+              span.far.fa-home
 
           if currentList
             each currentBoard.lists
@@ -22,7 +22,7 @@ template(name="header")
         ul
           li
             a(href="{{pathFor 'home'}}")
-              span.fa.fa-home
+              span.far.fa-home
               | {{_ 'home'}}
           each currentUser.starredBoards
             li.separator ●
@@ -33,7 +33,7 @@ template(name="header")
             li.current {{_ 'quick-access-description'}}
 
       a#header-new-board-icon.js-create-board
-        i.fa.fa-plus(title="Create a new board")
+        i.far.fa-plus(title="Create a new board")
 
       +headerUserBar
 
@@ -63,13 +63,13 @@ template(name="header")
     if hasAnnouncement
       .announcement
         p
-          i.fa.fa-bullhorn
+          i.far.fa-bullhorn
           +viewer
             | #{announcement}
-          i.fa.fa-times-circle.js-close-announcement
+          i.far.fa-times-circle.js-close-announcement
 
 template(name="offlineWarning")
   .offline-warning
     p
-      i.fa.fa-warning
+      i.far.fa-warning
       | {{_ 'app-is-offline'}}

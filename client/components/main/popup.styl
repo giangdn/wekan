@@ -15,16 +15,16 @@ $popupWidth = 300px
   hr
     margin: 0px -16px
     width: $popupWidth
-    
+
   .btn-container-clear
     clear: both
     padding: 16px 0 12px
-    
+
     button
       margin-bottom: 0
       margin-right: 4px
       float: none
-  
+
   p,
   textarea,
   input[type="text"],
@@ -62,19 +62,16 @@ $popupWidth = 300px
       overflow: hidden
       text-overflow: ellipsis
       white-space: nowrap
+      max-width: 65%
 
     .back-btn
       float: left
       overflow: hidden
       min-width: 16px
       transition: width 0.2s
-      line-height: 56px
-      font-size: 24px
-
-      i.fa
-        margin: 10px
-        margin-top: 12px
-        min-width: 16px
+      line-height: 55px
+      font-size: 1.5em
+      padding: 0 16px
 
       &.is-hidden
         width: 0
@@ -84,9 +81,10 @@ $popupWidth = 300px
     .close-btn
       position: absolute
       top: 0
-      line-height: 48px
-      font-size: 2em
-      right: 12px
+      line-height: 55px
+      font-size: 1.76em
+      right: 0
+      padding: 0 16px
 
   &.no-title .header
     background: none
@@ -104,11 +102,11 @@ $popupWidth = 300px
       width: $popupWidth - 32px
       padding: 0 16px 16px
       float: left
-      
+
       .create-label,
       .edit-label
         padding-top: 16px
-      
+
       .palette-colors
         padding-top: 8px
 

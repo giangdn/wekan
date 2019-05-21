@@ -3,18 +3,18 @@ template(name="sidebar")
     //a.sidebar-tongue.js-toggle-sidebar(
     //  class="{{#if isTongueHidden}}is-hidden{{/if}}",
     //  title="{{showTongueTitle}}")
-    //  i.fa.fa-navicon
+    //  i.far.fa-navicon
     .sidebar-shadow
       .sidebar-content.sidebar-shortcuts
         a.board-header-btn.js-shortcuts
-          i.fa.fa-keyboard-o
+          i.far.fa-keyboard
           span {{_ 'keyboard-shortcuts' }}
       .sidebar-content.js-board-sidebar-content.js-perfect-scrollbar
         a.hide-btn.js-hide-sidebar
-          i.fa.fa-times-thin
+          i.far.fa-times-thin
         unless isDefaultView
           h2
-            a.fa.fa-angle-left.js-back-home
+            a.far.fa-arrow-left.js-back-home
             = getViewTitle
         +Template.dynamic(template=getViewTemplate)
 
@@ -24,18 +24,18 @@ template(name='homeSidebar')
   +labelsWidget
   hr
   unless currentUser.isNoComments
-    h3
-      i.fa.fa-comments-o
+    h2
+      i.far.fa-comments
       | {{_ 'activities'}}
     +activities(mode="board")
 
 template(name="membersWidget")
   .board-widget.board-widget-members
-    h3
-      i.fa.fa-user-circle-o
+    h2
+      i.far.fa-user-circle
       | {{_ 'members'}}
       a.board-header-btn.js-open-board-menu(title="{{_ 'boardMenuPopup-title'}}").right
-        i.board-header-btn-icon.fa.fa-cog
+        i.board-header-btn-icon.far.fa-cog
 
     .board-widget-content
       each currentBoard.activeMembers
@@ -43,15 +43,15 @@ template(name="membersWidget")
       if isSandstorm
         if currentUser.isBoardMember
           a.member.add-member.sandstorm-powerbox-request-identity
-            i.fa.fa-plus
+            i.far.fa-plus
       else if currentUser.isBoardAdmin
         a.member.add-member.js-manage-board-members
-          i.fa.fa-plus
+          i.far.fa-plus
       .clearfix
   if isInvited
     hr
     p
-      i.fa.fa-exclamation-circle
+      i.far.fa-exclamation-circle
       | {{_ 'just-invited'}}
     button.js-member-invite-accept.primary {{_ 'accept'}}
     button.js-member-invite-decline {{_ 'decline'}}
@@ -62,7 +62,7 @@ template(name="boardChangeColorPopup")
       .board-background-select.js-select-background
         span.background-box(class="board-color-{{this}}")
           if isSelected
-            i.fa.fa-check
+            i.far.fa-check
 
 template(name="boardSubtaskSettingsPopup")
   form.board-subtask-settings
@@ -188,8 +188,8 @@ template(name="boardMenuPopup")
 
 template(name="labelsWidget")
   .board-widget.board-widget-labels
-    h3
-      i.fa.fa-tags
+    h2
+      i.far.fa-tags
       | {{_ 'labels'}}
     .board-widget-content
       each currentBoard.labels
@@ -198,7 +198,7 @@ template(name="labelsWidget")
           span.card-label-name= name
       if currentUser.isBoardAdmin
         a.card-label.add-label.js-add-label
-          i.fa.fa-plus
+          i.far.fa-plus
 
 template(name="memberPopup")
   .board-member-menu
@@ -210,7 +210,7 @@ template(name="memberPopup")
         p.quiet @#{user.username}
         if isInvited
           p
-            i.fa.fa-exclamation-circle
+            i.far.fa-exclamation-circle
             | {{_ 'not-accepted-yet'}}
 
     ul.pop-over-list
@@ -270,25 +270,25 @@ template(name="changePermissionsPopup")
       a(class="{{#if isLastAdmin}}disabled{{else}}js-set-admin{{/if}}")
         | {{_ 'admin'}}
         if isAdmin
-          i.fa.fa-check
+          i.far.fa-check
         span.sub-name {{_ 'admin-desc'}}
     li
       a(class="{{#if isLastAdmin}}disabled{{else}}js-set-normal{{/if}}")
         | {{_ 'normal'}}
         if isNormal
-          i.fa.fa-check
+          i.far.fa-check
         span.sub-name {{_ 'normal-desc'}}
     li
       a(class="{{#if isLastAdmin}}disabled{{else}}js-set-no-comments{{/if}}")
         | {{_ 'no-comments'}}
         if isNoComments
-          i.fa.fa-check
+          i.far.fa-check
         span.sub-name {{_ 'no-comments-desc'}}
     li
       a(class="{{#if isLastAdmin}}disabled{{else}}js-set-comment-only{{/if}}")
         | {{_ 'comment-only'}}
         if isCommentOnly
-          i.fa.fa-check
+          i.far.fa-check
         span.sub-name {{_ 'comment-only-desc'}}
   if isLastAdmin
     hr

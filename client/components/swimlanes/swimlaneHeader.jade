@@ -14,15 +14,15 @@ template(name="swimlaneFixedHeader")
     = title
   .swimlane-header-menu
     unless currentUser.isCommentOnly
-      a.fa.fa-plus.js-open-add-swimlane-menu.swimlane-header-plus-icon
-      a.fa.fa-ellipsis-h.js-open-swimlane-menu
+      a.far.fa-plus.js-open-add-swimlane-menu.swimlane-header-plus-icon
+      a.far.fa-ellipsis-h.js-open-swimlane-menu
 
 template(name="editSwimlaneTitleForm")
   .list-composer
     input.list-name-input.full-line(type="text" value=title autofocus)
     .edit-controls.clearfix
       button.primary.confirm(type="submit") {{_ 'save'}}
-      a.fa.fa-times-thin.js-close-inlined-form
+      a.far.fa-times-thin.js-close-inlined-form
 
 template(name="swimlaneActionPopup")
   unless currentUser.isCommentOnly
@@ -51,7 +51,7 @@ template(name="setSwimlaneColorPopup")
     .palette-colors: each colors
       span.card-label.palette-color.js-palette-color(class="card-details-{{color}}")
         if(isSelected color)
-          i.fa.fa-check
+          i.far.fa-check
     div.btn-container-clear
       button.primary.confirm.js-submit {{_ 'save'}}
       button.js-remove-color.negate.wide.right {{_ 'unset-color'}}

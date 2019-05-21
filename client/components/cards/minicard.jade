@@ -11,7 +11,7 @@ template(name="minicard")
           .minicard-label(class="card-label-{{color}}" title="{{name}}")
     .minicard-title
       .handle
-        .fa.fa-arrows
+        .fal.fa-arrows
       if $eq 'prefix-with-full-path' currentBoard.presentParentTask
         .parent-prefix
           | {{ parentString ' > ' }}
@@ -20,12 +20,12 @@ template(name="minicard")
           | {{ parentCardName }}
       if isLinkedBoard
         a.js-linked-link
-          span.linked-icon.fa.fa-folder
+          span.linked-icon.far.fa-folder
       else if isLinkedCard
         a.js-linked-link
-          span.linked-icon.fa.fa-id-card
+          span.linked-icon.far.fa-id-card
       if getArchived
-        span.linked-icon.linked-archived.fa.fa-archive
+        span.linked-icon.linked-archived.far.fa-archive
       +viewer
         = getTitle
       if $eq 'subtext-with-full-path' currentBoard.presentParentTask
@@ -70,19 +70,19 @@ template(name="minicard")
           +userAvatar(userId=this)
 
     .badges
+      if getDescription
+        .badge.badge-state-image-only(title=getDescription)
+          span.badge-icon.fal.fa-align-left
       unless currentUser.isNoComments
         if comments.count
           .badge(title="{{_ 'card-comments-title' comments.count }}")
-            span.badge-icon.fa.fa-comment-o.badge-comment
+            span.badge-icon.fal.fa-comment-alt.badge-comment
             span.badge-text= comments.count
-      if getDescription
-        .badge.badge-state-image-only(title=getDescription)
-          span.badge-icon.fa.fa-align-left
       if attachments.count
         .badge
-          span.badge-icon.fa.fa-paperclip
+          span.badge-icon.far.fa-paperclip
           span.badge-text= attachments.count
       if checklists.count
         .badge(class="{{#if checklistFinished}}is-finished{{/if}}")
-          span.badge-icon.fa.fa-check-square-o
+          span.badge-icon.fal.fa-check-square
           span.badge-text.check-list-text {{checklistFinishedCount}}/{{checklistItemCount}}

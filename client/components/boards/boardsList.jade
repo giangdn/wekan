@@ -3,7 +3,7 @@ template(name="boardList")
     ul.board-list.clearfix
       li.js-add-board
         a.board-list-item.label
-          i.fa.fa-plus
+          i.far.fa-plus
           br
           | {{_ 'add-board'}}
       each boards
@@ -12,8 +12,8 @@ template(name="boardList")
             .board-list-item
               span.details
                 span.board-list-item-name= title
-                i.fa.js-star-board(
-                  class="fa-star{{#if isStarred}} is-star-active{{else}}-o{{/if}}"
+                i.js-star-board(
+                  class="fa-star{{#if isStarred}} is-star-active{{else}} fas{{/if}}"
                   title="{{_ 'star-board-title'}}")
                 p.board-list-item-desc {{_ 'just-invited'}}
                 button.js-accept-invite.primary {{_ 'accept'}}
@@ -22,12 +22,12 @@ template(name="boardList")
             a.js-open-board.board-list-item(href="{{pathFor 'board' id=_id slug=slug}}")
               span.details
                 span.board-list-item-name= title
-                i.fa.js-star-board(
-                  class="fa-star{{#if isStarred}} is-star-active{{else}}-o{{/if}}"
+                i.js-star-board(
+                  class="fa-star{{#if isStarred}} fas is-star-active{{else}} fal{{/if}}"
                   title="{{_ 'star-board-title'}}")
 
                 if hasSpentTimeCards
-                  i.fa.js-has-spenttime-cards(
+                  i.fal.js-has-spenttime-cards(
                     class="fa-circle{{#if hasOvertimeCards}} has-overtime-card-active{{else}} no-overtime-card-active{{/if}}"
                     title="{{#if hasOvertimeCards}}{{_ 'has-overtime-cards'}}{{else}}{{_ 'has-spenttime-cards'}}{{/if}}")
                 div.board-list-item-desc
@@ -38,26 +38,26 @@ template(name="boardListHeaderBar")
   .board-header-btns.left
     a.board-header-btn.js-open-home-view(title="{{_ 'home-view'}}")
       if $eq currentUser.profile.homeView "home-view-teams"
-        i.fa.fa-user-circle-o
+        i.far.fa-user-circle-o
         span {{_ 'home-view-teams'}}
       if $eq currentUser.profile.homeView "home-view-activities"
-        i.fa.fa-comments-o
+        i.far.fa-comments-o
         span {{_ 'home-view-activities'}}
       if $eq currentUser.profile.homeView "home-view-reports"
-        i.fa.fa-pie-chart
+        i.far.fa-pie-chart
         span {{_ 'home-view-reports'}}
       if $eq currentUser.profile.homeView "home-view-files"
-        i.fa.fa-file-pdf-o
+        i.far.fa-file-pdf-o
         span {{_ 'home-view-files'}}
       else
-        i.fa.fa-th
+        i.far.fa-th
         span {{_ 'my-boards'}}
   .board-header-btns.right
     a.board-header-btn.js-open-archived-board
-      i.fa.fa-archive
+      i.far.fa-archive
       span {{_ 'archives'}}
     a.board-header-btn(href="{{pathFor 'board' id=templatesBoardId slug=templatesBoardSlug}}")
-      i.fa.fa-clone
+      i.far.fa-clone
       span {{_ 'templates'}}
 
 template(name="homeListHeaderPopup")
@@ -67,23 +67,23 @@ template(name="homeListHeader")
   ul.pop-over-list.list-change-home-view
     li
       a.js-toggle-home-view-boards
-        i.fa.fa-th.color-pink
+        i.far.fa-th.color-pink
         span {{_ 'my-boards'}}
     li
       a.js-toggle-home-view-teams
-        i.fa.fa-user-circle-o.color-teal
+        i.far.fa-user-circle.color-teal
         span {{_ 'home-view-teams'}}
     li
       a.js-toggle-home-view-activities
-        i.fa.fa-comments-o.color-red
+        i.far.fa-comments.color-red
         span {{_ 'home-view-activities'}}
     li
       a.js-toggle-home-view-files
-        i.fa.fa-file-pdf-o.color-wisteria
+        i.far.fa-file-pdf.color-wisteria
         span {{_ 'home-view-files'}}
     li
       hr
     li
       a.js-toggle-home-view-reports
-        i.fa.fa-pie-chart.color-yellow
+        i.fal.fa-chart-pie-alt.color-yellow
         span {{_ 'home-view-reports'}}

@@ -87,10 +87,15 @@ avatar-radius = 50%
     display: flex
     align-items: center
     justify-content: center
-    box-shadow: 0 0 0 2px darken(white, 25%) inset
+    box-shadow: 0 0 0 1px darken(white, 25%) inset
+
+    .far
+      color: darken(white, 25%)
 
     &:hover, &.is-active
-      box-shadow: 0 0 0 2px darken(white, 60%) inset
+      box-shadow: 0 0 0 1px darken(white, 60%) inset
+      .far
+        color: darken(white, 60%)
 
 .atMention
   background: #dbdbdb
