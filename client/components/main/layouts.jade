@@ -11,12 +11,13 @@ head
   link(rel="apple-touch-icon" href="/favicon.png")
   link(rel="mask-icon" href="/favicon.png")
   link(rel="manifest" href="/board.teama.io-manifest.json")
+  link(rel="stylesheet" href="/font-awesome/5.8.2/css/all.css")
 
 template(name="userFormsLayout")
   section.auth-layout
     div.logo-wrapper
       img.teama-logo#teama-logo(src="/teama-120.png" alt="TeamA Board logo")
-      
+
     section.auth-dialog
       +Template.dynamic(template=content)
       if currentSetting.displayAuthenticationMethod

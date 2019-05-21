@@ -60,7 +60,6 @@ http@1.3.0
 # UI components
 blaze
 reactive-var@1.0.11
-fortawesome:fontawesome
 mousetrap:mousetrap
 mquandalle:jquery-textcomplete
 mquandalle:jquery-ui-drag-drop-sort
