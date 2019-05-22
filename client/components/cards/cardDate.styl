@@ -4,14 +4,15 @@
 .card-date
   display: block
   border-radius: 2px
-  padding: 3px 6px
+  padding: 0 4px 0 0
+  line-height: 20px
   transition: all 0.2s
   font-size: 0.92em
   background-color: #dbdbdb
 
   &:hover, &.is-active
     background-color: #b3b3b3
-  
+
   &.current, &.almost-due, &.due, &.long-overdue
     color: #fff
 
@@ -19,17 +20,17 @@
     background-color: #5ba639
     &:hover, &.is-active
       background-color: darken(#5ba639, 10)
-  
+
   &.almost-due
     background-color: #edc909
     &:hover, &.is-active
       background-color: darken(#edc909, 10)
-  
+
   &.due
     background-color: #fa3f00
     &:hover, &.is-active
       background-color: darken(#fa3f00, 10)
-  
+
   &.long-overdue
     background-color: #fd5d47
     &:hover, &.is-active
@@ -43,7 +44,7 @@
   &.due-date
     time
       &::before
-        content: "\f090"  // symbol: fa-sign-in
+        content: "\f2f2"  // symbol: fa-sign-in
 
   &.start-date
     time
@@ -53,12 +54,19 @@
   &.received-date
     time
       &::before
-        content: "\f08b"  // symbol: fa-sign-out
+        content: "\f090"  // symbol: fa-sign-out
 
   time
     &::before
-      font: normal normal normal 14px/1 FontAwesome
+      font-family: "Font Awesome 5 Pro"
+      font-weight: 300
       font-size: inherit
       -webkit-font-smoothing: antialiased
-      margin-right: 0.3em
+      margin-right: 4px
+      line-height: 20px
+      display: inline-block
+      padding: 0 4px
+      background-color: rgba(0, 0, 0, 0.2)
+      border-top-left-radius: 2px
+      border-bottom-left-radius: 2px
 

@@ -16,12 +16,13 @@
   margin-left: -9px
 
   h3.medium-title
-    font-size: 16px
+    font-size: 1.2em
     line-height: 1.25em
     margin: 0 -4px 12px
     color: #525f7f
-    .fa
+    .fa, .fal, .far
       margin-right: 4px
+      font-size: 1.2em
   hr
     margin: 16px -20px
     width: auto
@@ -36,16 +37,16 @@
   .card-details-canvas
     width: 470px
     padding-left: 20px;
-    
+
     a.js-open-inlined-form
       color: #a6a6a6
       transition: 0.2s all
-      
+
       &:hover
         color: #2635da
         .fa
           color: #2635da
-        
+
       .viewer
         color: #525f7f
         background: #e9f3fe
@@ -78,7 +79,7 @@
       // margin-right: -8px
 
     .card-details-menu
-      font-size: 17px
+      font-size: 24px
       padding: 10px
 
     .card-details-watch
@@ -101,7 +102,7 @@
     form.inlined-form
       margin-top: 5px
       margin-bottom: 10px
-      
+
       textarea
         font-size: 1.4em
         line-height: 1.4
@@ -126,18 +127,21 @@
     display: flex
     flex-wrap: wrap
     margin: 15px 0
-    
+
     .card-details-item
       margin: 0 0.2em 1em
       a
         color: #a6a6a6
         transition: 0.2s all
-        
+
         &:hover
-          color: #2635da
+          color: #6772e5
       .card-date
         color: white
         display: inline-block
+        font-weight: 300
+        &:hover
+          color: white
       &:last-child
         margin-right: 0
       &.card-details-item-labels,
@@ -158,7 +162,7 @@
   /* .card-label
     padding-top: 5px
     padding-bottom: 5px */
-  .card-label-first-letter 
+  .card-label-first-letter
     text-algin: center
     font-size: 0
     &:first-letter

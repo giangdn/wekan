@@ -1,13 +1,13 @@
 template(name="checklistTriggers")
   div.trigger-item
     div.trigger-content
-      div.trigger-text 
+      div.trigger-text
         | {{_'r-when-a-checklist'}}
       div.trigger-dropdown
         select(id="gen-check-action")
           option(value="created") {{_'r-added-to'}}
           option(value="removed") {{_'r-removed-from'}}
-      div.trigger-text 
+      div.trigger-text
         | {{_'r-a-card'}}
       div.trigger-button.trigger-button-person.js-show-user-field
         i.fa.fa-user
@@ -17,22 +17,22 @@ template(name="checklistTriggers")
         div.trigger-dropdown
           input(class="user-name",type=text,placeholder="{{_'username'}}")
     div.trigger-button.js-add-gen-check-trigger.js-goto-action
-      i.fa.fa-plus
+      i.far.fa-plus
 
 
   div.trigger-item
     div.trigger-content
-      div.trigger-text 
+      div.trigger-text
         | {{_'r-when-the-checklist'}}
       div.trigger-dropdown
-        input(id="check-name",type=text,placeholder="{{_'r-name'}}") 
-      div.trigger-text 
+        input(id="check-name",type=text,placeholder="{{_'r-name'}}")
+      div.trigger-text
         | {{_'r-is'}}
       div.trigger-dropdown
         select(id="spec-check-action")
           option(value="created") {{_'r-added-to'}}
           option(value="removed") {{_'r-removed-from'}}
-      div.trigger-text 
+      div.trigger-text
         | {{_'r-a-card'}}
       div.trigger-button.trigger-button-person.js-show-user-field
         i.fa.fa-user
@@ -42,11 +42,11 @@ template(name="checklistTriggers")
         div.trigger-dropdown
           input(class="user-name",type=text,placeholder="{{_'username'}}")
     div.trigger-button.js-add-spec-check-trigger.js-goto-action
-      i.fa.fa-plus
+      i.far.fa-plus
 
   div.trigger-item
     div.trigger-content
-      div.trigger-text 
+      div.trigger-text
         | {{_'r-when-a-checklist'}}
       div.trigger-dropdown
         select(id="gen-comp-check-action")
@@ -60,15 +60,15 @@ template(name="checklistTriggers")
         div.trigger-dropdown
           input(class="user-name",type=text,placeholder="{{_'username'}}")
     div.trigger-button.js-add-gen-comp-trigger.js-goto-action
-      i.fa.fa-plus
+      i.far.fa-plus
 
   div.trigger-item
     div.trigger-content
-      div.trigger-text 
+      div.trigger-text
         | {{_'r-when-the-checklist'}}
       div.trigger-dropdown
-        input(id="spec-comp-check-name",type=text,placeholder="{{_'r-name'}}") 
-      div.trigger-text 
+        input(id="spec-comp-check-name",type=text,placeholder="{{_'r-name'}}")
+      div.trigger-text
         | {{_'r-is'}}
       div.trigger-dropdown
         select(id="spec-comp-check-action")
@@ -82,11 +82,11 @@ template(name="checklistTriggers")
         div.trigger-dropdown
           input(class="user-name",type=text,placeholder="{{_'username'}}")
     div.trigger-button.js-add-spec-comp-trigger.js-goto-action
-      i.fa.fa-plus
+      i.far.fa-plus
 
   div.trigger-item
     div.trigger-content
-      div.trigger-text 
+      div.trigger-text
         | {{_'r-when-a-item'}}
       div.trigger-dropdown
         select(id="check-item-gen-action")
@@ -100,15 +100,15 @@ template(name="checklistTriggers")
         div.trigger-dropdown
           input(class="user-name",type=text,placeholder="{{_'username'}}")
     div.trigger-button.js-add-gen-check-item-trigger.js-goto-action
-      i.fa.fa-plus
+      i.far.fa-plus
 
   div.trigger-item
     div.trigger-content
-      div.trigger-text 
+      div.trigger-text
         | {{_'r-when-the-item'}}
       div.trigger-dropdown
-        input(id="check-item-name",type=text,placeholder="{{_'r-name'}}") 
-      div.trigger-text 
+        input(id="check-item-name",type=text,placeholder="{{_'r-name'}}")
+      div.trigger-text
         | {{_'r-is'}}
       div.trigger-dropdown
         select(id="check-item-spec-action")
@@ -122,4 +122,4 @@ template(name="checklistTriggers")
         div.trigger-dropdown
           input(class="user-name",type=text,placeholder="{{_'username'}}")
     div.trigger-button.js-add-spec-check-item-trigger.js-goto-action
-      i.fa.fa-plus
+      i.far.fa-plus

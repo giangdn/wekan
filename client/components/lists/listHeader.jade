@@ -7,13 +7,13 @@ template(name="listHeader")
     else
       if isMiniScreen
         if currentList
-          a.list-header-left-icon.far.fa-angle-left.js-unselect-list
+          a.list-header-left-icon.fal.fa-arrow-left.js-unselect-list
       h2.list-header-name(
         class="{{#if currentUser.isBoardMember}}js-open-inlined-form is-editable{{/if}}")
         if wipLimit.enabled
           span.wip-limit-badge
             span(class="{{#if reachedWipLimit}}highlight{{/if}}"){{cards.count}}
-            / #{wipLimit.value}
+             #{wipLimit.value}
         = title
 
         if showCardsCountForList cards.count
@@ -27,9 +27,9 @@ template(name="listHeader")
             unless currentUser.isCommentOnly
               if canSeeAddCard
                 a.js-add-card.far.fa-plus.list-header-plus-icon
-              a.far.fa-navicon.js-open-list-menu
+              a.far.fa-ellipsis-h.js-open-list-menu
         else
-          a.list-header-menu-icon.far.fa-angle-right.js-select-list
+          a.list-header-menu-icon.fal.fa-angle-right.js-select-list
       else if currentUser.isBoardMember
         if isWatching
           i.list-header-watch-icon.far.fa-eye

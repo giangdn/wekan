@@ -7,7 +7,7 @@ template(name="rulesList")
     ul.rules-list
       each rules
         li.rules-lists-item
-          p 
+          p
             = title
           div.rules-btns-group
             button.js-goto-details
@@ -22,6 +22,6 @@ template(name="rulesList")
     if currentUser.isAdmin
       div.rules-add
         button.js-goto-trigger
-          i.fa.fa-plus
+          i.far.fa-plus
           | {{{_ 'r-add-rule'}}}
         input(type=text,placeholder="{{{_ 'r-new-rule-name' }}}",id="ruleTitle")

@@ -5,7 +5,7 @@ template(name="cardActions")
         select(id="label-action")
           option(value="add") {{{_'r-add'}}}
           option(value="remove") {{{_'r-remove'}}}
-      div.trigger-text 
+      div.trigger-text
         | {{{_'r-label'}}}
       div.trigger-dropdown
         select(id="label-id")
@@ -13,7 +13,7 @@ template(name="cardActions")
             option(value="#{_id}")
               = name
     div.trigger-button.js-add-label-action.js-goto-rules
-      i.fa.fa-plus
+      i.fal.fa-plus
 
   div.trigger-item
     div.trigger-content
@@ -21,19 +21,19 @@ template(name="cardActions")
         select(id="member-action")
           option(value="add") {{{_'r-add'}}}
           option(value="remove") {{{_'r-remove'}}}
-      div.trigger-text 
+      div.trigger-text
         | {{{_'r-member'}}}
       div.trigger-dropdown
-        input(id="member-name",type=text,placeholder="{{{_'r-name'}}}")  
+        input(id="member-name",type=text,placeholder="{{{_'r-name'}}}")
     div.trigger-button.js-add-member-action.js-goto-rules
-      i.fa.fa-plus
+      i.fal.fa-plus
 
   div.trigger-item
     div.trigger-content
-      div.trigger-text 
+      div.trigger-text
         | {{{_'r-remove-all'}}}
     div.trigger-button.js-add-removeall-action.js-goto-rules
-      i.fa.fa-plus
+      i.fal.fa-plus
 
   div.trigger-item
     div.trigger-content
@@ -44,7 +44,7 @@ template(name="cardActions")
           class="card-details-{{cardColorButton}}")
           | {{{_ cardColorButtonText }}}
     div.trigger-button.js-set-color-action.js-goto-rules
-      i.fa.fa-plus
+      i.fal.fa-plus
 
 template(name="setCardActionsColorPopup")
   form.edit-label

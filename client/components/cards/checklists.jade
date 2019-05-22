@@ -12,7 +12,7 @@ template(name="checklists")
       +addChecklistItemForm
     else
       a.js-open-inlined-form
-        i.fa.fa-plus-square-o
+        i.fal.fa-plus
         | {{_ 'add-checklist'}}...
 
 template(name="checklistDetail")
@@ -27,11 +27,11 @@ template(name="checklistDetail")
 
         if canModifyCard
           h3.medium-title.js-open-inlined-form.is-editable
-            i(class="fa fa-check-square")
+            i(class="fal fa-check-square")
             = checklist.title
         else
           h3.medium-title
-            i(class="fa fa-check-square")
+            i(class="fal fa-check-square")
             = checklist.title
     +checklistItems(checklist = checklist)
 
@@ -79,7 +79,7 @@ template(name="checklistItems")
         +addChecklistItemForm
       else
         a.add-checklist-item.js-open-inlined-form
-          i.fa.fa-plus-square-o
+          i.fal.fa-plus
           | {{_ 'add-checklist-item'}}...
 
 template(name='checklistItemDetail')

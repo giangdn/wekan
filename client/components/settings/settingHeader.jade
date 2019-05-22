@@ -6,7 +6,7 @@ template(name="settingHeaderBar")
     unless isMiniScreen
       if currentUser
         a.setting-header-btn.settings(href="{{pathFor 'setting'}}")
-          i.fa(class="fa-cog")
+          i.fal(class="fa-cog")
           span {{_ 'settings'}}
 
         a.setting-header-btn.people(href="{{pathFor 'people'}}")

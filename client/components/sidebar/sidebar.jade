@@ -14,7 +14,7 @@ template(name="sidebar")
           i.far.fa-times-thin
         unless isDefaultView
           h2
-            a.far.fa-arrow-left.js-back-home
+            a.fal.fa-arrow-left.js-back-home
             = getViewTitle
         +Template.dynamic(template=getViewTemplate)
 
@@ -25,17 +25,17 @@ template(name='homeSidebar')
   hr
   unless currentUser.isNoComments
     h2
-      i.far.fa-comments
+      i.fal.fa-comments-alt
       | {{_ 'activities'}}
     +activities(mode="board")
 
 template(name="membersWidget")
   .board-widget.board-widget-members
     h2
-      i.far.fa-user-circle
+      i.fal.fa-users
       | {{_ 'members'}}
       a.board-header-btn.js-open-board-menu(title="{{_ 'boardMenuPopup-title'}}").right
-        i.board-header-btn-icon.far.fa-cog
+        i.board-header-btn-icon.fal.fa-cog
 
     .board-widget-content
       each currentBoard.activeMembers
@@ -189,7 +189,7 @@ template(name="boardMenuPopup")
 template(name="labelsWidget")
   .board-widget.board-widget-labels
     h2
-      i.far.fa-tags
+      i.fal.fa-tags
       | {{_ 'labels'}}
     .board-widget-content
       each currentBoard.labels

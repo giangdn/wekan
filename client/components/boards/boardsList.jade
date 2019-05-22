@@ -3,7 +3,7 @@ template(name="boardList")
     ul.board-list.clearfix
       li.js-add-board
         a.board-list-item.label
-          i.far.fa-plus
+          i.fal.fa-plus
           br
           | {{_ 'add-board'}}
       each boards
@@ -47,17 +47,17 @@ template(name="boardListHeaderBar")
         i.far.fa-pie-chart
         span {{_ 'home-view-reports'}}
       if $eq currentUser.profile.homeView "home-view-files"
-        i.far.fa-file-pdf-o
+        i.fal.fa-file-pdf-o
         span {{_ 'home-view-files'}}
       else
         i.far.fa-th
         span {{_ 'my-boards'}}
   .board-header-btns.right
     a.board-header-btn.js-open-archived-board
-      i.far.fa-archive
+      i.fal.fa-archive
       span {{_ 'archives'}}
     a.board-header-btn(href="{{pathFor 'board' id=templatesBoardId slug=templatesBoardSlug}}")
-      i.far.fa-clone
+      i.fal.fa-clone
       span {{_ 'templates'}}
 
 template(name="homeListHeaderPopup")

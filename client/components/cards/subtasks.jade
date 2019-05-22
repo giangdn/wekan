@@ -14,7 +14,7 @@ template(name="subtasks")
       +addSubtaskItemForm
     else
       a.js-open-inlined-form
-        i.fa.fa-plus-square-o
+        i.fal.fa-plus
         | {{_ 'add-subtask'}}...
 
 template(name="subtaskDetail")
@@ -80,7 +80,7 @@ template(name="subtasksItems")
         +addSubtaskItemForm
       else
         a.add-subtask-item.js-open-inlined-form
-          i.fa.fa-plus-square-o
+          i.fal.fa-plus
           | {{_ 'add-subtask-item'}}...
 
 template(name='subtaskItemDetail')

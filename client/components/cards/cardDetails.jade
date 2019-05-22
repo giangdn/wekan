@@ -4,15 +4,15 @@ template(name="cardDetails")
       +inlinedForm(classNames="js-card-details-title")
         +editCardTitleForm
       else
-        a.fa.fa-times-thin.close-card-details.js-close-card-details
+        a.fal.fa-times.close-card-details.js-close-card-details
         if currentUser.isBoardMember
-          a.fa.fa-navicon.card-details-menu.js-open-card-details-menu
+          a.fal.fa-ellipsis-h.card-details-menu.js-open-card-details-menu
         h2.card-details-title.js-card-title(
           class="{{#if canModifyCard}}js-open-inlined-form is-editable{{/if}}")
             +viewer
               = getTitle
               if isWatching
-                i.fa.fa-eye.card-details-watch
+                i.fal.fa-eye.card-details-watch
         .card-details-path
           each parentList
             | &nbsp; &gt; &nbsp;
@@ -37,8 +37,8 @@ template(name="cardDetails")
           +cardReceivedDate
         else
           if canModifyCard
-            a.js-received-date 
-              i.fa.fa-plus-square-o 
+            a.js-received-date
+              i.fal.fa-plus
               | {{_ 'add'}}
 
       .card-details-item.card-details-item-start
@@ -47,8 +47,8 @@ template(name="cardDetails")
           +cardStartDate
         else
           if canModifyCard
-            a.js-start-date 
-              i.fa.fa-plus-square-o 
+            a.js-start-date
+              i.fal.fa-plus
               | {{_ 'add'}}
 
       .card-details-item.card-details-item-due
@@ -57,8 +57,8 @@ template(name="cardDetails")
           +cardDueDate
         else
           if canModifyCard
-            a.js-due-date 
-              i.fa.fa-plus-square-o 
+            a.js-due-date
+              i.fal.fa-plus
               | {{_ 'add'}}
 
       .card-details-item.card-details-item-end
@@ -68,7 +68,7 @@ template(name="cardDetails")
         else
           if canModifyCard
             a.js-end-date
-              i.fa.fa-plus-square-o 
+              i.fal.fa-plus
               | {{_ 'add'}}
 
     .card-details-items
@@ -79,7 +79,7 @@ template(name="cardDetails")
           | {{! XXX Hack to hide syntaxic coloration /// }}
         if canModifyCard
           a.member.add-member.card-details-item-add-button.js-add-members(title="{{_ 'card-members-title'}}")
-            i.fa.fa-plus
+            i.fal.fa-plus
 
       .card-details-item.card-details-item-labels
         h3.card-details-item-title {{_ 'labels'}}
@@ -88,7 +88,7 @@ template(name="cardDetails")
             span.card-label.card-label-first-letter(class="card-label-{{color}}" title=name)= name
         if canModifyCard
           a.card-label.add-label.js-add-labels(title="{{_ 'card-labels-title'}}")
-            i.fa.fa-plus
+            i.fal.fa-plus
 
     if customFieldsWD
       .card-details-items
@@ -97,7 +97,7 @@ template(name="cardDetails")
             h3.card-details-item-title
               = definition.name
             +cardCustomField
-    
+
     if getSpentTime
       .card-details-items
         .card-details-item.card-details-item-spent
@@ -109,9 +109,9 @@ template(name="cardDetails")
 
     //- XXX We should use "editable" to avoid repetiting ourselves
     if canModifyCard
-      h3.card-details-item-title.medium-title 
-        i.fa.fa-align-left 
-        | {{ _ 'description'}} 
+      h3.card-details-item-title.medium-title
+        i.fal.fa-align-left
+        | {{ _ 'description'}}
       +inlinedCardDescription(classNames="card-description js-card-description")
         +editor(autofocus=true)
           | {{getUnsavedValue 'cardDescription' _id getDescription}}
@@ -134,15 +134,15 @@ template(name="cardDetails")
             = ' - '
             a.js-close-inlined-form {{_ 'discard'}}
     else if getDescription
-      h3.card-details-item-title.medium-title 
-        i.fa.fa-align-left 
-        | {{ _ 'description'}} 
+      h3.card-details-item-title.medium-title
+        i.fal.fa-align-left
+        | {{ _ 'description'}}
       +viewer
         = getDescription
     hr
     .card-details-items
       .card-details-item.card-details-item-name
-        h3.card-details-item-title {{_ 'requested-by'}} 
+        h3.card-details-item-title {{_ 'requested-by'}}
         if canModifyCard
           +inlinedForm(classNames="js-card-details-requester")
             +editCardRequesterForm
@@ -153,7 +153,7 @@ template(name="cardDetails")
                   = getRequestedBy
               else
                 span
-                  i.fa.fa-plus-square-o 
+                  i.fal.fa-plus
                   | {{_ 'add'}}
         else if getRequestedBy
           span.medium-text
@@ -171,7 +171,7 @@ template(name="cardDetails")
                   = getAssignedBy
               else
                 span
-                  i.fa.fa-plus-square-o  
+                  i.fal.fa-plus
                   | {{_ 'add'}}
         else if getRequestedBy
           span.medium-text
@@ -186,7 +186,7 @@ template(name="cardDetails")
 
     hr
     h3.medium-title
-      i.fa.fa-file-pdf-o
+      i.fal.fa-file-pdf
       | {{_ 'attachments'}}
 
     +attachmentsGalery
@@ -195,7 +195,7 @@ template(name="cardDetails")
     unless currentUser.isNoComments
       .activity-title
         h3.medium-title
-          i.fa.fa-comments-o 
+          i.fal.fa-comments-alt
           | {{ _ 'activity'}}
         if currentUser.isBoardMember
           .material-toggle-switch
@@ -313,7 +313,7 @@ template(name="cardMembersPopup")
             = user.profile.fullname
             | (<span class="username">{{ user.username }}</span>)
           if isCardMember
-            i.fa.fa-check
+            i.fal.fa-check
 
 template(name="cardMorePopup")
   p.quiet
@@ -360,7 +360,7 @@ template(name="setCardColorPopup")
       unless $eq color 'white'
         span.card-label.palette-color.js-palette-color(class="card-details-{{color}}")
           if(isSelected color)
-            i.fa.fa-check
+            i.fal.fa-check
     div.btn-container-clear
       button.primary.confirm.js-submit {{_ 'save'}}
       button.js-remove-color.negate.wide.right {{_ 'unset-color'}}

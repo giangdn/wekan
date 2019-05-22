@@ -18,6 +18,9 @@
   text-align: left
   transition: all 0.2s
 
+  .card-label-name
+    font-weight: 300
+
   &.card-label-auto
       width: auto
       border-radius: 3px
@@ -31,13 +34,16 @@
     padding: 0
 
   &.add-label
-    box-shadow: 0 0 0 2px darken(white, 25%) inset
+    box-shadow: 0 0 0 1px darken(white, 25%) inset
     color: darken(white, 25%)
     transition: all 0.2s
+    width: auto
+    min-width: 12px
+    text-align: center
 
     &:hover, &.is-active
-      box-shadow: 0 0 0 2px darken(white, 60%) inset
-      color: darken(white, 60%)
+      box-shadow: 0 0 0 1px #6772e5 inset
+      color: #6772e5
 
     i.fa-plus
       line-height: 23px
@@ -187,6 +193,7 @@
   line-height: 18px
   padding: 8px
   position: relative
+  font-weight: 300
 
   .card-label-selectable-icon
     color: white
