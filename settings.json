@@ -1,1 +1,5 @@
-{}
+{
+  "env": {
+    "ROOT_URL": "https://board.teama.io"
+  }
+}
