@@ -112,7 +112,7 @@ template(name="boardHeaderBar")
           span {{#if MultiSelection.isActive}}{{_ 'multi-selection-on'}}{{else}}{{_ 'multi-selection'}}{{/if}}
           if MultiSelection.isActive
             a.board-header-btn-close.js-multiselection-reset(title="{{_ 'filter-clear'}}")
-              i.far.fa-times-thin
+              i.fal.fa-times
 
       a.board-header-btn.js-toggle-sidebar.board-header-btn-menu
         i.far.fa-bars

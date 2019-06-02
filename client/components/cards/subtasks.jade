@@ -53,7 +53,7 @@ template(name="addSubtaskItemForm")
   textarea.js-add-subtask-item(rows='1' autofocus)
   .edit-controls.clearfix
     button.primary.confirm.js-submit-add-subtask-item-form(type="submit") {{_ 'save'}}
-    a.fa.fa-times-thin.js-close-inlined-form
+    a.fal.fa-times.js-close-inlined-form
 
 template(name="editSubtaskItemForm")
   textarea.js-edit-subtask-item(rows='1' autofocus)
@@ -63,7 +63,7 @@ template(name="editSubtaskItemForm")
       = subtask.title
   .edit-controls.clearfix
     button.primary.confirm.js-submit-edit-subtask-item-form(type="submit") {{_ 'save'}}
-    a.fa.fa-times-thin.js-close-inlined-form
+    a.fal.fa-times.js-close-inlined-form
     span(title=createdAt) {{ moment createdAt }}
     if canModifyCard
       a.js-delete-subtask-item {{_ "delete"}}...

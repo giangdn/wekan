@@ -22,7 +22,7 @@ template(name="cardCustomField-text")
                 = value
             .edit-controls.clearfix
                 button.primary(type="submit") {{_ 'save'}}
-                a.fa.fa-times-thin.js-close-inlined-form
+                a.fal.fa-times.js-close-inlined-form
         else
             a.js-open-inlined-form
                 if value
@@ -39,7 +39,7 @@ template(name="cardCustomField-number")
             input(type="number" value=data.value)
             .edit-controls.clearfix
                 button.primary(type="submit") {{_ 'save'}}
-                a.fa.fa-times-thin.js-close-inlined-form
+                a.fal.fa-times.js-close-inlined-form
         else
             a.js-open-inlined-form
                 if value
@@ -72,7 +72,7 @@ template(name="cardCustomField-dropdown")
                         option(value=_id) {{name}}
             .edit-controls.clearfix
                 button.primary(type="submit") {{_ 'save'}}
-                a.fa.fa-times-thin.js-close-inlined-form
+                a.fal.fa-times.js-close-inlined-form
         else
             a.js-open-inlined-form
                 if value

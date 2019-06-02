@@ -19,7 +19,7 @@
     h1
       font-size: 20px
       line-height: 1.7em
-      padding: 4px 10px 0
+      padding: 4px 10px
       margin: 0
       margin-right: 10px
       float: left
@@ -76,13 +76,13 @@
         display: block
         line-height: 32px
         color: darken(white, 5%)
-        margin: 0 6px 0 10px
+        margin: 0 8px
         font-size: 1.2em
 
         + span
           display: inline-block
           margin-top: 0
-          margin-right: 10px
+          margin-right: 8px
 
       .board-header-btn-close
         float: right
@@ -107,8 +107,7 @@
   color: white
   transition: background-color 0.4s
   background: #0288d1
-  height: 28px
-  font-size: 12px
+  height: 29px
   display: flex
   z-index: 17
 
@@ -125,14 +124,20 @@
 
   ul
     transition: opacity 0.2s
-    margin: 4px 0 0 5px
+    margin: 0 0 0 5px
     // overflow: hidden
     li
       display: block
       float: left
       width: auto
       // color: darken(white, 15%)
-      padding: 2px 6px
+      padding: 0 6px
+      line-height: 29px
+      height: 29px
+      box-sizing: border-box
+      a
+        line-height: 29px
+        display: inline-block
 
       &:hover
         border-bottom: solid 2px lighten(#039be5, 5%)
@@ -148,6 +153,7 @@
         margin-left: 5px
     li.separator
      border-bottom: none !important
+     font-size: 0.8em
 
   #header-user-bar,
   #header-new-board-icon
@@ -165,7 +171,6 @@
         width: 20px
         height: @width
         margin: 0
-        margin-top: 1px
 
     .header-user-bar-name
       margin: 2px 8px 2px 0
@@ -190,8 +195,7 @@
         margin-top: 0px
 
       .board-header-btn
-        height: 26px
-        line-height: @height
+        line-height: 26px
         font-size: 16px
 
         i.fa
@@ -205,7 +209,7 @@
   #header-quick-access
     transition: background-color 0.4s
     width: 100%
-    padding: 4px 0px
+    padding: 0
     z-index: 30
     overflow: hidden
 
@@ -223,12 +227,14 @@
         a
           height: 100%
           padding: 0 4px
-          line-height: 24px
+          line-height: 29px
+          display: inline-block
           // margin: -10px 0px
 
         .fa-home
-          font-size: 26px
-          margin-top: -2px
+          font-size: 1.5em
+          display: inline-block
+          line-height: 29px
 
     #header-new-board-icon
       display: none
@@ -238,6 +244,11 @@
       right: 0
       padding: 0
       margin: 0
+
+      .header-user-bar-avatar
+        .member
+          width: 24px
+          height: 24px
 
 .announcement,
 .offline-warning
