@@ -276,6 +276,8 @@
     "email-invite": "Invite via email",
     "email-invite-subject": "__inviter__ sent you an invitation",
     "email-invite-text": "Dear __user__,\n\n__inviter__ invites you to join board \"__board__\" for collaboration.\n\nPlease follow the link below:\n\n__url__\n\nThanks.",
+    "email-invite-hi": "Dear __user__,",
+    "email-invite-message": "__inviter__ invites you to join board <b>\"__board__\"</b> for collaborations.<br><br>Please follow the link below:<br>__url__.",
     "email-resetPassword-subject": "Reset your password on __siteName__",
     "email-resetPassword-text": "Hello __user__,\n\nTo reset your password, simply click the link below.\n\n__url__\n\nThanks.",
     "email-sent": "Email sent",
@@ -688,5 +690,12 @@
     "home-view-teams": "Teams",
     "home-view-activities": "Activities",
     "home-view-files": "Uploaded Files",
-    "home-view-reports": "Reports"
+    "home-view-reports": "Reports",
+    "email-teama-blog": "blog",
+    "email-teama-thanks": "Best regards,<br>TeamA.io - Smart Workspace for your teams",
+    "email-unsubcribe": "unsubscribe",
+    "email-send-by": "Send by",
+    "email-teama-mobile-app": "Team A apps for iOS and Android",
+    "email-teama-mobile-app-link": "Click here to download Team A mobile apps",
+    "email-teama-mobile-app-desc": "to use our services easier and more convenient."
 }
