@@ -151,7 +151,7 @@ if (Meteor.isServer) {
       const emailUnsubcribe = TAPi18n.__('email-unsubcribe', {}, lang);
       const emailThanks     = TAPi18n.__('email-teama-thanks', {}, lang);
 
-      const emailHi         = TAPi18n.__('email-invite-register-hi', {user: user.username}, lang);
+      const emailHi         = TAPi18n.__('email-invite-register-hi', {user: icode.email.split('@')[0]}, lang);
       const emailMessage    = TAPi18n.__('email-invite-register-message', params, lang);
 
       // send html invitation email
