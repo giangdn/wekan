@@ -108,14 +108,16 @@ template(name="multiselectionSidebar")
     span {{_ 'archive-selection'}}
 
 template(name="disambiguateMultiLabelPopup")
-  p {{_ 'what-to-do'}}
-  button.wide.js-remove-label {{_ 'remove-label'}}
-  button.wide.js-add-label {{_ 'add-label'}}
+  .content-spacing
+    p {{_ 'what-to-do'}}
+    button.wide.js-remove-label {{_ 'remove-label'}}
+    button.wide.js-add-label {{_ 'add-label'}}
 
 template(name="disambiguateMultiMemberPopup")
-  p {{_ 'what-to-do'}}
-  button.wide.js-unassign-member {{_ 'unassign-member'}}
-  button.wide.js-assign-member {{_ 'assign-member'}}
+  .content-spacing
+    p {{_ 'what-to-do'}}
+    button.wide.js-unassign-member {{_ 'unassign-member'}}
+    button.wide.js-assign-member {{_ 'assign-member'}}
 
 template(name="moveSelectionPopup")
   +boardLists
