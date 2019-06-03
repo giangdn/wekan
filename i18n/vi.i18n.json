@@ -500,6 +500,8 @@
     "send-smtp-test": "Gửi thử một email để kiểm tra",
     "invitation-code": "Mã tham gia",
     "email-invite-register-subject": "__inviter__ đã gửi bạn một lời mời",
+    "email-invite-register-hi": "Xin chào __user__,",
+    "email-invite-register-message": "__inviter__ mời bạn tham gia một bảng trên TeamA Board để cộng tác làm việc.<br><br>Vui lòng nhấn vào liên kết bên dưới:<br>__url__<br><br>Và mã tham gia của bạn là: <b>__icode__</b>.",
     "email-invite-register-text": "Xin chào __user__,\n\n__inviter__ mời bạn tham gia một bảng trên TeamA Board để cộng tác làm việc.\n\nVui lòng nhấn vào liên kết bên dưới:\n__url__\n\nVà mã tham gia của bạn là: __icode__\n\nCảm ơn.",
     "email-smtp-test-subject": "SMTP Test Email",
     "email-smtp-test-text": "Đã gửi email thành công",

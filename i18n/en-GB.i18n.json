@@ -499,6 +499,8 @@
     "send-smtp-test": "Send a test email to yourself",
     "invitation-code": "Invitation Code",
     "email-invite-register-subject": "__inviter__ sent you an invitation",
+    "email-invite-register-hi": "Dear __user__,",
+    "email-invite-register-message": "__inviter__ invites you to kanban board for collaborations.<br><br>Please follow the link below:<br>__url__<br><br>And your invitation code is: <b>__icode__</b>.",
     "email-invite-register-text": "Dear __user__,\n\n__inviter__ invites you to kanban board for collaborations.\n\nPlease follow the link below:\n__url__\n\nAnd your invitation code is: __icode__\n\nThanks.",
     "email-smtp-test-subject": "SMTP Test Email",
     "email-smtp-test-text": "You have successfully sent an email",
