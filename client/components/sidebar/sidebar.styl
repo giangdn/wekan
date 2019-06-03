@@ -45,8 +45,15 @@
       margin-right: 4px
       margin-top: 4px
 
-    .hide-btn
-      display: none
+    .js-hide-sidebar
+      position: absolute
+      right: 16px
+      width: 32px
+      height: 32px
+      line-height: 32px
+      text-align: center
+      font-size: 26px
+
     h2
       margin-bottom: 16px
       vertical-align: middle
@@ -54,6 +61,7 @@
       white-space: nowrap
       overflow: hidden
       text-overflow: ellipsis
+
 
       .far, .fa, .fal
         margin-right: 8px
@@ -63,6 +71,21 @@
         font-size: 1.2em
         min-width: 16px
         padding: 0 8px 0 0
+
+    .board-widget-members
+      h2
+        width: auto
+        margin-right: 36px
+        line-height: 30px
+        .board-header-btn
+          width: 32px
+          height: 30px
+          line-height: 30px
+          text-align: center
+          font-size: 22px
+          i
+            margin: 0
+            line-height: 30px
 
     h3
       // color: darken(white, 50%)
@@ -242,19 +265,9 @@
     right: -@width
     .sidebar-shadow
       box-shadow: none
-      .sidebar-content
-        .board-header-btn-icon
-          font-size: 1.5em
-
-
       .hide-btn
-        font-size: 2em
-        position: absolute
-        right: 12px
-        top: 6px
         display: block
         z-index: 15
-        color: darken(white, 50%)
 
         i.fa
           line-height: @width
