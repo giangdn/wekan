@@ -488,6 +488,7 @@ if (Meteor.isServer) {
                                                     <o:p></o:p>
                                                   </span>
                                                 </p>
+                                                <br>
                                                 <p style='line-height: 18.0pt; mso-line-height-rule: exactly'>
                                                   <span style='font-size: 12.0pt; font-family: "Helvetica", sans-serif; color: #737F8D'>
                                                     ${emailThanks}
