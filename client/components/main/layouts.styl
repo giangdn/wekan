@@ -54,6 +54,7 @@ body
   background: rgba(0, 0, 0, 0.6)
   z-index: 100
   overflow-y: auto
+  animation: fadeIn 0.3s ease
 
   .modal-content
     width: 500px
@@ -64,6 +65,7 @@ body
     background: #ffffff
     z-index: 110
     position: relative
+    animation: slide-up 0.3s ease;
 
     h2
       margin-bottom: 25px
@@ -91,6 +93,7 @@ body
     border-radius: 4px
     background: #ffffff
     z-index: 110
+    animation: slide-up 0.3s ease;
 
     h2
       margin-bottom: 15px
@@ -735,6 +738,28 @@ a
   from
     // Support IE11 https://github.com/wekan/wekan/pull/646
     height: 100%
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 @media screen and (max-width: 800px)
   #content
