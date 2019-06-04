@@ -243,7 +243,7 @@ template(name="addMemberPopup")
       +esInput(index="users")
 
     if loading.get
-      +spinner
+      +spinnerEllipsis
     else if error.get
       .warning {{_ error.get}}
     else
@@ -259,7 +259,7 @@ template(name="addMemberPopup")
                 .quiet ({{_ 'joined'}})
 
         +ifEsIsSearching(index='users')
-          +spinner
+          +spinnerEllipsis
 
         +ifEsHasNoResults(index="users")
           .manage-member-section

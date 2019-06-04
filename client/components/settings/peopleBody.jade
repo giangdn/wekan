@@ -12,7 +12,7 @@ template(name="people")
               a.js-setting-menu(data-id="people-setting") {{_ 'people'}}
         .main-body
           if loading.get
-            +spinner
+            +spinnerEllipsis
           else if people.get
             +peopleGeneral
 

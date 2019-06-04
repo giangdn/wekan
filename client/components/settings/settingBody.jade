@@ -20,7 +20,7 @@ template(name="setting")
               a.js-setting-menu(data-id="layout-setting") {{_ 'layout'}}
         .main-body
           if loading.get
-            +spinner
+            +spinnerEllipsis
           else if generalSetting.get
             +general
           else if emailSetting.get

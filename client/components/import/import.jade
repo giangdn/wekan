@@ -64,7 +64,7 @@ template(name="importMapMembersAddPopup")
               = profile.fullname
               | (<span class="username">{{username}}</span>)
       +ifEsIsSearching(index='users')
-        +spinner
+        +spinnerE
       +ifEsHasNoResults(index="users")
         .manage-member-section
           p.quiet {{_ 'no-results'}}
