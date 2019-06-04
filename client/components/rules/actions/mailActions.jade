@@ -4,8 +4,8 @@ template(name="mailActions")
       div.trigger-text.trigger-text-email
         | {{_'r-send-email'}}
       div.trigger-dropdown-mail
-        input(id="email-to",type=text,placeholder="{{_'r-to'}}")
-      input(id="email-subject",type=text,placeholder="{{_'r-subject'}}")
+        input(id="email-to",type="email",placeholder="{{_'r-to'}}")
+      input(id="email-subject",type="text",placeholder="{{_'r-subject'}}")
       textarea(id="email-msg")
     div.trigger-button.trigger-button-email.js-mail-action.js-goto-rules
       i.far.fa-plus

@@ -11,7 +11,7 @@ template(name="filterSidebar")
         span.sidebar-list-item-description
           | {{_ 'filter-no-label'}}
         if Filter.labelIds.isSelected undefined
-          i.fa.fa-check
+          i.far.fa-check
     each currentBoard.labels
       li
         a.name.js-toggle-label-filter
@@ -22,7 +22,7 @@ template(name="filterSidebar")
             else
               span.quiet {{_ "label-default" (_ (concat "color-" color))}}
           if Filter.labelIds.isSelected _id
-            i.fa.fa-check
+            i.far.fa-check
   hr
   ul.sidebar-list
     li(class="{{#if Filter.members.isSelected undefined}}active{{/if}}")
@@ -31,7 +31,7 @@ template(name="filterSidebar")
         span.sidebar-list-item-description
           | {{_ 'filter-no-member'}}
         if Filter.members.isSelected undefined
-          i.fa.fa-check
+          i.far.fa-check
     each currentBoard.activeMembers
       with getUser userId
         li(class="{{#if Filter.members.isSelected _id}}active{{/if}}")
@@ -41,7 +41,7 @@ template(name="filterSidebar")
               = profile.fullname
               | (<span class="username">{{ username }}</span>)
             if Filter.members.isSelected _id
-              i.fa.fa-check
+              i.far.fa-check
   hr
   ul.sidebar-list
     li(class="{{#if Filter.customFields.isSelected undefined}}active{{/if}}")
@@ -49,14 +49,14 @@ template(name="filterSidebar")
             span.sidebar-list-item-description
               | {{_ 'filter-no-custom-fields'}}
             if Filter.customFields.isSelected undefined
-              i.fa.fa-check
+              i.far.fa-check
     each currentBoard.customFields
       li(class="{{#if Filter.customFields.isSelected _id}}active{{/if}}")
         a.name.js-toggle-custom-fields-filter
           span.sidebar-list-item-description
             | {{ name }}
           if Filter.customFields.isSelected _id
-            i.fa.fa-check
+            i.far.fa-check
   hr
   span {{_ 'advanced-filter-label'}}
   input.js-field-advanced-filter(type="text")
@@ -64,10 +64,10 @@ template(name="filterSidebar")
   if Filter.isActive
     hr
     a.sidebar-btn.js-clear-all
-      i.fa.fa-filter
+      i.fal.fa-filter
       span {{_ 'filter-clear'}}
     a.sidebar-btn.js-filter-to-selection
-      i.fa.fa-check-square-o
+      i.far.fa-check-square-o
       span {{_ 'filter-to-selection'}}
 
 template(name="multiselectionSidebar")
@@ -82,7 +82,7 @@ template(name="multiselectionSidebar")
             else
               span.quiet {{_ "label-default" (_ (concat "color-" color))}}
           if allSelectedElementHave 'label' _id
-            i.fa.fa-check
+            i.far.fa-check
           else if someSelectedElementHave 'label' _id
             i.fa.fa-ellipsis-h
   hr
@@ -96,7 +96,7 @@ template(name="multiselectionSidebar")
               = profile.fullname
               | (<span class="username">{{ username }}</span>)
             if allSelectedElementHave 'member' _id
-              i.fa.fa-check
+              i.far.fa-check
             else if someSelectedElementHave 'member' _id
               i.fa.fa-ellipsis-h
   hr

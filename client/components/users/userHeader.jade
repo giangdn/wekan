@@ -65,7 +65,7 @@ template(name="changeLanguagePopup")
         a.js-set-language
           = name
           if isCurrentLanguage
-            i.fa.fa-check
+            i.far.fa-check
 
 template(name="changeSettingsPopup")
   div
@@ -74,7 +74,7 @@ template(name="changeSettingsPopup")
         a.js-toggle-system-messages
           | {{_ 'hide-system-messages'}}
           if hiddenSystemMessages
-            i.fa.fa-check
+            i.far.fa-check
     hr
     .content-spacing
       p

@@ -1,27 +1,26 @@
 template(name="rulesList")
   .rules
     h2
-      i.fa.fa-magic
+      i.fal.fa-magic
       | {{{_ 'r-board-rules' }}}
-
-    ul.rules-list
+    hr
+    ul.rules-list.list-group
       each rules
-        li.rules-lists-item
+        li.rules-lists-item.list-group-item-info.list-group-item
           p
             = title
           div.rules-btns-group
-            button.js-goto-details
-              i.fa.fa-eye
+            button.js-goto-details.btn-info
+              i.far.fa-eye
               | {{{_ 'r-view-rule'}}}
             if currentUser.isAdmin
-              button.js-delete-rule
-                i.fa.fa-trash-o
+              button.js-delete-rule.btn-danger
+                i.far.fa-trash
                 | {{{_ 'r-delete-rule'}}}
       else
         li.no-items-message {{{_ 'r-no-rules' }}}
     if currentUser.isAdmin
       div.rules-add
+        input(type="text",placeholder="{{{_ 'r-new-rule-name' }}}",id="ruleTitle")
         button.js-goto-trigger
-          i.far.fa-plus
-          | {{{_ 'r-add-rule'}}}
-        input(type=text,placeholder="{{{_ 'r-new-rule-name' }}}",id="ruleTitle")
+          | {{_ 'r-add-rule'}}

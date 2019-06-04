@@ -46,7 +46,7 @@ template(name="changeAvatarPopup")
           img.avatar.avatar-image(src="{{url avatarUrlOptions}}")
         | {{_ 'uploaded-avatar'}}
         if isSelected
-          i.fa.fa-check
+          i.far.fa-check
         p.sub-name
           unless isSelected
             a.js-delete-avatar {{_ 'delete'}}
@@ -57,7 +57,7 @@ template(name="changeAvatarPopup")
         +userAvatarInitials(userId=currentUser._id)
       | {{_ 'initials' }}
       if noAvatarUrl
-        i.fa.fa-check
+        i.far.fa-check
        p.sub-name {{_ 'default-avatar'}}
   br
   input.hide.js-upload-avatar-input(accept="image/*;capture=camera" type="file")

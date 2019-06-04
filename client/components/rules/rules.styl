@@ -1,3 +1,13 @@
+.rules
+  h2
+    margin-bottom: 16px
+
+  hr
+    margin-left: -16px
+    margin-right: -16px
+    background-color: #cccccc
+    width: auto
+
 .rules-list
   overflow:hidden
   overflow-y: auto
@@ -16,26 +26,21 @@
   display:inline-block
 .rules-btns-group
   position: absolute
-  right: 0
+  right: 4px
   top: 50%
   transform: translateY(-50%)
   button
   	margin: auto
 .rules-add
   display: block
-  overflow: auto
   margin-top: 15px
   margin-bottom: 5px
-  input
-  	display: inline-block
-  	float: right
-  	margin: auto
-  	margin-right: 10px
+
+  input,
   button
-  	display: inline-block
-  	float: right
-  	margin: auto
-  	color: #ffffff
+    display: inline-block
+    width: auto
+    margin-bottom: 0
 .rules-back
   display: block
   overflow: auto
@@ -59,19 +64,15 @@
 
 
 .triggers-content
-  color: #727479
-  background: #dedede
   .triggers-body
     display flex
-    padding-top 15px
     height 100%
 
     .triggers-side-menu
-      background-color: #f7f7f7
-      border: 1px solid #f0f0f0
+      background-color: #e9f3fe
+      border: 1px solid #dbebfd
       border-radius: 4px
       height: intrinsic
-      box-shadow: inset -1px -1px 3px rgba(0,0,0,.05)
 
       ul
 
@@ -81,7 +82,10 @@
           height:50px
           text-align:center
           font-size: 25px
+          transition: all 0.2s
+          border-radius: 2px
           position: relative
+          cursor: pointer
 
           i
             position: absolute;
@@ -116,7 +120,7 @@
         margin-bottom:5px
         border-radius: 3px
         position: relative
-        background-color: white
+        background-color: #e9f3fe
         .trigger-content
             position:absolute
             top:50%
@@ -126,14 +130,18 @@
               font-size: 16px
               display:inline-block
             .trigger-inline-button
-              font-size: 16px
+              font-size: 14px
               display: inline;
               padding: 6px;
-              border: 1px solid #eee
-              border-radius: 4px
-              box-shadow: inset -1px -1px 3px rgba(0,0,0,.05)
+              cursor: pointer
+              border: 1px solid #badafc
+              background-color: #dbebfd
+              border-radius: 2px
+              transition: all 0.2s
               &:hover, &.is-active
-                box-shadow: 0 0 0 2px darken(white, 60%) inset
+                border-color: #6772e5
+                background-color: #ffffff
+                color: #6772e5
             .trigger-text.trigger-text-email
               margin-left: 5px;
               margin-top: 10px;
@@ -153,16 +161,18 @@
           left:20px
           right:100px
         .trigger-button
+          cursor: pointer
           position:absolute
           top:50%
           transform: translateY(-50%)
+          transition: all 0.2s
           width:30px
           height:30px
-          border: 1px solid #eee
-          border-radius: 4px
-          box-shadow: inset -1px -1px 3px rgba(0,0,0,.05)
+          border: 1px solid #badafc
+          background-color: #dbebfd
+          border-radius: 2px
           text-align:center
-          font-size: 20px
+          font-size: 14px
           right:10px
           i
             position: absolute
@@ -171,7 +181,9 @@
             box-shadow: none
             transform: translate(-50%,-50%)
           &:hover, &.is-active
-            box-shadow: 0 0 0 2px darken(white, 60%) inset
+            border-color: #6772e5
+            background-color: #ffffff
+            color: #6772e5
         .trigger-button.trigger-button-email
           top:30px
         .trigger-button.trigger-button-person
