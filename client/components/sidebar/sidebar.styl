@@ -236,28 +236,13 @@
     left: 5px
 
 .archived-lists .archived-lists-item
-  border-top: 1px solid darken(white, 20%)
-  clear: both
-  padding: 5px 0
-  line-height: 34px
-
   .board-header-btns
-    font-size: 1.2em
-    font-weight: 600
-    line-height: 34px
-
-  &:first-child
-    border-top: none
-
-  button
-    float: right
-    margin: 0
-    font-size: 12px
-    padding: 6px 12px
-    font-weight: 500
-
-    i.fa
-      margin: 0
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    button
+      margin: auto
 
 @media screen and (max-width: 800px)
   .board-sidebar
