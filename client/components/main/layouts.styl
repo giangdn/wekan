@@ -44,6 +44,7 @@ body
     margin-top: 10px
     padding: 15px
     box-sizing: border-box
+    animation: fadeInSoft 0.2s ease
 
 #modal
   position: absolute
@@ -54,7 +55,7 @@ body
   background: rgba(0, 0, 0, 0.6)
   z-index: 100
   overflow-y: auto
-  animation: fadeIn 0.3s ease
+  animation: fadeInSoft 0.3s ease
 
   .modal-content
     width: 500px
@@ -733,6 +734,10 @@ a
 @keyframes fadeIn
   from
     opacity: 0
+
+@keyframes fadeInSoft
+  from
+    opacity: 0.5
 
 @keyframes flexGrowIn
   from
