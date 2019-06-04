@@ -12,6 +12,9 @@ setBoardColor(color)
   .board-list & a,
   .board-list & div
     background-color: color
+  &.lds-ring div
+    border-color: color transparent transparent transparent
+    background-color: transparent
 
   .is-selected .minicard
     border-left: 1px solid color

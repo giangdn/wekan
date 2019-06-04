@@ -70,6 +70,6 @@ template(name="header")
 
 template(name="offlineWarning")
   .offline-warning
-    p
-      i.far.fa-exclamation-circle
+    div
+      +spinnerRingSmall
       | {{{_ 'app-is-offline'}}}
