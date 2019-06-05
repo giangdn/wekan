@@ -1,6 +1,6 @@
 {
-  "name": "TeamA Boards",
-  "short_name": "Boards",
+  "name": "TeamA Board",
+  "short_name": "Board",
   "description": "TeamA Boards - Web application for team to manage tasks like Trello",
   "lang": "en-US",
   "icons": [
@@ -10,13 +10,23 @@
       "sizes": "60x60"
     },
     {
-      "src": "/teama-120.png",
+      "src": "/boarda-120.png",
       "type": "image/png",
       "sizes": "120x120"
+    },
+    {
+      "src": "/boarda-240.png",
+      "type": "image/png",
+      "sizes": "240x240"
+    },
+    {
+      "src": "/boarda-640.png",
+      "type": "image/png",
+      "sizes": "640x640"
     }
   ],
   "display": "standalone",
-  "background_color": "#f6f9fc",
+  "background_color": "#fff",
   "theme_color": "#039be5",
   "start_url": "/"
 }
