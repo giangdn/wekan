@@ -24,6 +24,13 @@ template(name="listBody")
             | {{_ 'add-card'}}
 
 template(name="spinnerList")
+  .lds-ellipsis.sk-spinner.sk-spinner-list(class=currentBoard.colorClass id="showMoreResults")
+    .i1
+    .i2
+    .i3
+    .i4
+
+template(name="spinnerListBk")
   .sk-spinner.sk-spinner-wave.sk-spinner-list(
     class=currentBoard.colorClass
     id="showMoreResults")
