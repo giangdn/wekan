@@ -7,16 +7,10 @@
   animation: fadeInSoft 0.3s ease
   flex: 0 0 270px
   position: relative
-  // Even if this background color is the same as the body we can't leave it
-  // transparent, because that won't work during a list drag.
-  // background: darken(white, 13%)
-  // background: #f6f9fc
-  // background: #f0f3fc
   background: #e9f3fe
   margin: 16px 8px
   border-radius: 8px
-  // border-left: 1px solid darken(white, 20%)
-  border: solid 1px darken( #e9f3fe, 3%) //#ecf3fc
+  border: solid 2px darken(#e9f3fe, 3%) //#ecf3fc
   padding: 0
   float: left
   overflow: hidden
@@ -32,7 +26,7 @@
       font-size: 13px
       line-height: 15px
       text-align: center
-      border: solid 1px darken(#e9f3fe, 10%)
+      border: solid 2px darken(#e9f3fe, 16%)
       transition: all 0.2s
 
       &:hover
@@ -80,16 +74,13 @@
 
 .list-header
   flex: 0 0 auto
-  padding: 6px 12px 10px
-  // margin-bottom: 10px
+  padding: 10px 12px 14px
   position: relative
-  min-height: 20px
+  min-height: 27px
+  line-height: 27px
   border-top-left-radius: 7px
   border-top-right-radius: 7px
-  // background-color: #e4e4e4;
-  // background-color: #ffffff
   border-top: 4px solid #e9f3fe
-  // box-shadow: 4px 1px 8px -2px rgba(0,0,0,0.2), 0px 3px 3px -2px rgba(0,0,0,0.14), 0px 3px 4px 0px rgba(0,0,0,0.12)
 
   .wip-limit-badge
     background: #ffffff
@@ -110,22 +101,23 @@
     display: inline-block
     margin: 0
     vertical-align: middle
-    max-width: calc(100% - 60px)
+    max-width: calc(100% - 62px)
+    min-width: 60px
     white-space: nowrap
     font-size: 16px
     font-weight: 500
-    line-height: 20px
+    line-height: 27px
     text-shadow: 0px 1px rgba(0,0,0,0.1)
     color: #6772e5
-    // font-weight: bold
-    min-height: 9px
-    min-width: 30px
+    min-height: 27px
     overflow: hidden
     text-overflow: ellipsis
     word-wrap: break-word
 
     .quiet.small
       display: inline-block
+      font-weight: 400
+      text-shadow: none
 
   .list-header-watch-icon
     padding-left: 10px
@@ -135,10 +127,9 @@
 
   .list-header-menu
     position: absolute
-    padding: 2px 10px
-    // margin-top: 1px
-    top: 0
-    right: 0
+    padding: 0
+    top: 10px
+    right: 12px
 
   .list-header-plus-icon
     color: #a6a6a6
@@ -208,10 +199,6 @@
     float: left
 
 @media screen and (max-width: 800px)
-  .list-header-menu
-    margin-right: 8px
-    padding-top: 8px !important
-
   .mini-list
     width: 100%
     border-left: 0px
@@ -236,7 +223,7 @@
     border-radius: 0
 
     .list-body
-      padding: 8px 16px 16px
+      padding: 0 16px 16px
 
     .list-header-add
       background: #ffffff
@@ -262,6 +249,7 @@
 
   .list-header
     border-radius: 0
+    padding: 10px 16px 14px
     .list-header-name
       display: inline-block
       max-width: calc(100% - 88px)
@@ -272,6 +260,9 @@
         vertical-align: middle
       .wip-limit-badge
          line-height: 22px
+    .list-header-menu
+      line-height: 30px
+      right: 16px
     .list-header-left-icon
       display: inline
       padding: 4px
