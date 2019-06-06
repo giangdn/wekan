@@ -7,47 +7,39 @@
   display: flex
 
 .setting-content
-  padding 16px
   width 100%
   height 100%
-  position: absolute;
 
   .content-title
     font-size 20px
+    line-height: 56px
+    height: 56px
+    color: #6772e5
+    text-shadow: 0px 1px rgba(0,0,0,0.1)
 
   .content-body
-    display flex
-    margin-top 15px
-    background: #fff
-    height 100%
-
     .side-menu
-      width: 250px;
-
       ul
-
+        padding: 0.2rem 1rem 0
+        border-bottom: solid 2px #dbebfd
         li
-          margin: 0.1rem 0.2rem;
+          display: inline-block
+          border-top-left-radius: 8px
+          border-top-right-radius: 8px
+          transition: all 0.2s
 
-          &.active
-            background #fff
-            box-shadow 0 1px 2px rgba(0,0,0,0.15);
-
+          &.active,
           &:hover
-            background #fff
-            box-shadow 0 1px 2px rgba(0,0,0,0.15);
+            background #e9f3fe
           a
-            @extends .flex
-            padding: 1rem 0 1rem 1rem
-            width: 100% - 5rem
-
-
+            padding: 0.8rem 1rem
+            display: block
             span
               font-size: 13px
 
     .main-body
       flex: 1
-      padding: 0 16px 16px
+      padding: 16px
       -webkit-user-select: auto // Safari 3.1+
       -moz-user-select: auto // Firefox 2+
       -ms-user-select: auto // IE 10+
@@ -63,7 +55,9 @@
               border-right: 2px solid #2980b9;
 
             span
-              padding: 0 0.5rem
+              vertical-align: middle
+              line-height: 20px
+              padding-left: 4px
 
           .admin-announcement,
           .invite-people,
@@ -83,15 +77,21 @@
 
 
 .option
-  @extends .flex
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  background: #fff;
-  text-decoration: none;
-  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  margin-top: 5px;
-  padding: 5px;
+  -webkit-border-radius: 3px
+  border-radius: 3px
+  background: #fff
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+  display: block
+  text-decoration: none
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.2)
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2)
+  padding: 1rem
+  vertical-align: middle
+  .materialCheckBox
+    display: inline-block
+    vertical-align: middle
 
 .title
   font-weight 700;
@@ -99,7 +99,13 @@
 .description
   margin-bottom 0.5rem;
 .bg-white
-  background #f9fbfc;
+  flex-wrap: wrap
+  display: flex
+  > div
+    width: 25%
+    box-sizing: border-box
+    flex-grow: 1
+    padding: 8px;
 
 .form-control.has-error
   border-color: #a94442;

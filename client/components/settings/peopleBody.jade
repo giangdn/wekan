@@ -1,16 +1,13 @@
 template(name="people")
-  .setting-content
-    unless currentUser.isAdmin
-      | {{_ 'error-notAuthorized'}}
-    else
-      .content-title
-        span {{_ 'people'}}
-      .content-body
-        .side-menu
-          ul
-            li.active
-              a.js-setting-menu(data-id="people-setting") {{_ 'people'}}
-        .main-body
+  .wrapper
+    .setting-content
+      unless currentUser.isAdmin
+        | {{_ 'error-notAuthorized'}}
+      else
+        .content-title
+          i.fal.fa-users
+          | {{_ 'people'}}
+        .content-body
           if loading.get
             +spinnerEllipsis
           else if people.get

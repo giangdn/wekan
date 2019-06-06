@@ -3,23 +3,28 @@
   &:hover:not(.is-disabled)
     background: rgba(0, 0, 0, .15)
   color: darken(white, 5%)
-  margin-left: 20px;
-  padding-right: 10px;
-  height: 28px;
-  font-size: 13px;
-  float: left;
-  overflow: hidden;
-  line-height: @height;
-  margin: 0 2px;
+  border-radius: 4px
+  color: #f2f2f2
+  -webkit-transition: all 0.2s
+  -moz-transition: all 0.2s
+  -o-transition: all 0.2s
+  -ms-transition: all 0.2s
+  transition: all 0.2s
+  padding: 0
+  height: 32px
+  overflow: hidden
+  line-height: 32px
+  margin: 1px
+  display: inline-block
 
-  i.fa
-    float: left
-    display: block
-    line-height: 28px
-    color: darken(white, 5%)
-    margin: 0 10px
-
-  + span
+  i.far, i.fas, i.fa, i.fal
     display: inline-block
-    margin-top: 1px
-    margin-right: 10px
+    line-height: 32px
+    color: darken(white, 5%)
+    margin: 0 8px
+    font-size: 1.2em
+
+    + span
+      display: inline-block
+      margin-top: 0
+      margin-right: 8px

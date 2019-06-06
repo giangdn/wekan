@@ -1,36 +1,38 @@
 template(name="setting")
-  .setting-content
-    unless currentUser.isAdmin
-      | {{_ 'error-notAuthorized'}}
-    else
-      .content-title
-        span {{_ 'settings'}}
-      .content-body
-        .side-menu
-          ul
-            li.active
-              a.js-setting-menu(data-id="registration-setting") {{_ 'registration'}}
-            li
-              a.js-setting-menu(data-id="email-setting") {{_ 'email'}}
-            li
-              a.js-setting-menu(data-id="account-setting") {{_ 'accounts'}}
-            li
-              a.js-setting-menu(data-id="announcement-setting") {{_ 'admin-announcement'}}
-            li
-              a.js-setting-menu(data-id="layout-setting") {{_ 'layout'}}
-        .main-body
-          if loading.get
-            +spinnerEllipsis
-          else if generalSetting.get
-            +general
-          else if emailSetting.get
-            +email
-          else if accountSetting.get
-            +accountSettings
-          else if announcementSetting.get
-            +announcementSettings
-          else if layoutSetting.get
-            +layoutSettings
+  .wrapper
+    .setting-content
+      unless currentUser.isAdmin
+        | {{_ 'error-notAuthorized'}}
+      else
+        .content-title
+          i.fal.fa-cog
+          | {{_ 'settings'}}
+        .content-body
+          .side-menu
+            ul
+              li.active
+                a.js-setting-menu(data-id="registration-setting") {{_ 'registration'}}
+              li
+                a.js-setting-menu(data-id="email-setting") {{_ 'email'}}
+              li
+                a.js-setting-menu(data-id="account-setting") {{_ 'accounts'}}
+              li
+                a.js-setting-menu(data-id="announcement-setting") {{_ 'admin-announcement'}}
+              li
+                a.js-setting-menu(data-id="layout-setting") {{_ 'layout'}}
+          .main-body
+            if loading.get
+              +spinnerEllipsis
+            else if generalSetting.get
+              +general
+            else if emailSetting.get
+              +email
+            else if accountSetting.get
+              +accountSettings
+            else if announcementSetting.get
+              +announcementSettings
+            else if layoutSetting.get
+              +layoutSettings
 
 template(name="general")
   ul#registration-setting.setting-detail
@@ -49,10 +51,10 @@ template(name="general")
             .title {{_ 'to-boards'}}
             .bg-white
               each boards
-                a.option.flex.js-toggle-board-choose(id= _id)
-                  .materialCheckBox(data-id= _id)
-
-                  span= title
+                div
+                  a.option.js-toggle-board-choose(id= _id)
+                    .materialCheckBox(data-id= _id)
+                    span= title
 
           li
             button.js-email-invite.primary {{_ 'invite'}}
@@ -92,8 +94,6 @@ template(name='email')
 
     li
       button.js-save.primary {{_ 'save'}}
-
-    li
       button.js-send-smtp-test-email.primary {{_ 'send-smtp-test'}}
 
 template(name='accountSettings')

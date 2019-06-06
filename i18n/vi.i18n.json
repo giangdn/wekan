@@ -479,7 +479,7 @@
     "wipLimitErrorPopup-title": "Invalid WIP Limit",
     "wipLimitErrorPopup-dialog-pt1": "The number of tasks in this list is higher than the WIP limit you've defined.",
     "wipLimitErrorPopup-dialog-pt2": "Please move some tasks out of this list, or set a higher WIP limit.",
-    "admin-panel": "Trang quản trị",
+    "admin-panel": "Quản Trị",
     "settings": "Các thiết lập",
     "people": "Các thành viên",
     "registration": "Sự đăng ký",

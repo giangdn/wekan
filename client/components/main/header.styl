@@ -9,13 +9,6 @@
   #header-main-bar
     // height: 40px
     padding: 4px 10px
-
-    &:after
-      content: ' '
-      display: block
-      width: 100%
-      clear: both
-
     h1
       font-size: 20px
       line-height: 1.7em
@@ -66,14 +59,13 @@
       padding: 0
       height: 32px
       // font-size: 13px
-      float: left
       overflow: hidden
       line-height: @height
       margin: 1px
+      display: inline-block
 
       i.far, i.fas, i.fa, i.fal
-        float: left
-        display: block
+        display: inline-block
         line-height: 32px
         color: darken(white, 5%)
         margin: 0 8px
