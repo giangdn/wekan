@@ -10,13 +10,13 @@ Template.boardMenuPopup.events({
   },
   // 'click .js-change-board-color': Popup.open('boardChangeColor'),
   'click .js-change-language': Popup.open('changeLanguage'),
-//  'click .js-archive-board ': Popup.afterConfirm('archiveBoard', function() {
-//    const currentBoard = Boards.findOne(Session.get('currentBoard'));
-//    currentBoard.archive();
-//    // XXX We should have some kind of notification on top of the page to
-//    // confirm that the board was successfully archived.
-//    FlowRouter.go('home');
-//  }),
+  //  'click .js-archive-board ': Popup.afterConfirm('archiveBoard', function() {
+  //    const currentBoard = Boards.findOne(Session.get('currentBoard'));
+  //    currentBoard.archive();
+  //    // XXX We should have some kind of notification on top of the page to
+  //    // confirm that the board was successfully archived.
+  //    FlowRouter.go('home');
+  //  }),
   'click .js-delete-board': Popup.afterConfirm('deleteBoard', function() {
     const currentBoard = Boards.findOne(Session.get('currentBoard'));
     Popup.close();
@@ -40,7 +40,7 @@ Template.boardMenuPopup.helpers({
   },
   exportFilename() {
     const boardId = Session.get('currentBoard');
-    return `wekan-export-board-${boardId}.json`;
+    return `teama.io-export-board-${boardId}.json`;
   },
 });
 
