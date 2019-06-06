@@ -48,25 +48,40 @@ template(name="editListTitleForm")
 
 template(name="listActionPopup")
   ul.pop-over-list
-    li: a.js-toggle-watch-list {{#if isWatching}}{{_ 'unwatch'}}{{else}}{{_ 'watch'}}{{/if}}
+    li: a.js-toggle-watch-list
+      if isWatching
+       i.fal.fa-eye-slash
+      else
+       i.fal.fa-eye
+      | {{#if isWatching}}{{_ 'unwatch'}}{{else}}{{_ 'watch'}}{{/if}}
   unless currentUser.isCommentOnly
     hr
     ul.pop-over-list
-      li: a.js-set-color-list {{_ 'set-color-list'}}
+      li: a.js-set-color-list
+        i.fal.fa-palette
+        | {{_ 'set-color-list'}}
     hr
     ul.pop-over-list
       if cards.count
-        li: a.js-select-cards {{_ 'list-select-cards'}}
+        li: a.js-select-cards
+          i.fal.fa-ballot-check
+          | {{_ 'list-select-cards'}}
         hr
     if currentUser.isBoardAdmin
       ul.pop-over-list
-        li: a.js-set-wip-limit {{#if isWipLimitEnabled }}{{_ 'edit-wip-limit'}}{{else}}{{_ 'setWipLimitPopup-title'}}{{/if}}
+        li: a.js-set-wip-limit
+          i.fal.fa-layer-group
+          | {{#if isWipLimitEnabled }}{{_ 'edit-wip-limit'}}{{else}}{{_ 'setWipLimitPopup-title'}}{{/if}}
       hr
     ul.pop-over-list
-      li: a.js-close-list {{_ 'archive-list'}}
+      li: a.js-close-list
+        i.fal.fa-archive
+        | {{_ 'archive-list'}}
     hr
     ul.pop-over-list
-      li: a.js-more {{_ 'listMorePopup-title'}}
+      li: a.js-more
+        i.fal.fa-ellipsis-h
+        | {{_ 'listMorePopup-title'}}
 
 template(name="boardLists")
   ul.pop-over-list
