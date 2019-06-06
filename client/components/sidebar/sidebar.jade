@@ -154,10 +154,16 @@ template(name="outgoingWebhooksPopup")
 
 template(name="boardMenuPopup")
   ul.pop-over-list
-    li: a.js-custom-fields {{_ 'custom-fields'}}
-    li: a.js-open-archives {{_ 'archived-items'}}
+    li: a.js-custom-fields
+      i.fal.fa-puzzle-piece
+      | {{_ 'custom-fields'}}
+    li: a.js-open-archives
+      i.fal.fa-archive
+      | {{_ 'archived-items'}}
     if currentUser.isBoardAdmin
-      li: a.js-change-board-color {{_ 'board-change-color'}}
+      li: a.js-change-board-color
+        i.fal.fa-palette
+        | {{_ 'board-change-color'}}
     //-
       XXX Language should be handled by sandstorm, but for now display a
       language selection link in the board menu. This link is normally present
@@ -168,13 +174,21 @@ template(name="boardMenuPopup")
     if currentUser.isBoardAdmin
       hr
       ul.pop-over-list
-        li: a(href="{{exportUrl}}", download="{{exportFilename}}") {{_ 'export-board'}}
+        li: a(href="{{exportUrl}}", download="{{exportFilename}}")
+          i.fal.fa-cloud-download
+          | {{_ 'export-board'}}
         unless currentBoard.isTemplatesBoard
-          li: a.js-archive-board {{_ 'archive-board'}}
-        li: a.js-outgoing-webhooks {{_ 'outgoing-webhooks'}}
+          li: a.js-archive-board
+            i.fal.fa-file-archive
+            | {{_ 'archive-board'}}
+        li: a.js-outgoing-webhooks
+          i.fal.fa-retweet
+          | {{_ 'outgoing-webhooks'}}
       hr
       ul.pop-over-list
-        li: a.js-subtask-settings {{_ 'subtask-settings'}}
+        li: a.js-subtask-settings
+          i.fal.fa-sliders-v-square
+          | {{_ 'subtask-settings'}}
 
   if isSandstorm
     hr
