@@ -61,6 +61,7 @@
       white-space: nowrap
       overflow: hidden
       text-overflow: ellipsis
+      line-height: 32px
 
 
       .far, .fa, .fal
@@ -75,17 +76,19 @@
     .board-widget-members
       h2
         width: auto
-        margin-right: 36px
-        line-height: 30px
-        .board-header-btn
-          width: 32px
-          height: 30px
-          line-height: 30px
-          text-align: center
-          font-size: 22px
-          i
-            margin: 0
-            line-height: 30px
+        margin-right: 64px
+      .board-header-btn
+        width: 32px
+        height: 32px
+        line-height: 32px
+        text-align: center
+        font-size: 22px
+        position: absolute
+        right: 48px
+        top: 16px
+        i
+          margin: 0
+          line-height: 32px
 
     h3
       // color: darken(white, 50%)
@@ -98,7 +101,7 @@
         font-size: 1.2em
 
     hr
-      margin: 16px -16px
+      margin: 32px -16px 8px
       width: auto
 
     ul.sidebar-list

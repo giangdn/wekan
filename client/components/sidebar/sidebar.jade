@@ -34,8 +34,8 @@ template(name="membersWidget")
     h2
       i.fal.fa-users
       | {{_ 'members'}}
-      a.board-header-btn.js-open-board-menu(title="{{_ 'boardMenuPopup-title'}}").right
-        i.board-header-btn-icon.fal.fa-cog
+    a.board-header-btn.js-open-board-menu(title="{{_ 'boardMenuPopup-title'}}")
+      i.board-header-btn-icon.fal.fa-cog
 
     .board-widget-content
       each currentBoard.activeMembers
