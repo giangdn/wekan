@@ -56,13 +56,15 @@
 
     h2
       margin-bottom: 16px
+      margin-right: 32px
       vertical-align: middle
-      width: 100%
+      width: auto
       white-space: nowrap
       overflow: hidden
       text-overflow: ellipsis
       line-height: 32px
-
+      color: #6772e5
+      text-shadow: 0px 1px rgba(0,0,0,0.2);
 
       .far, .fa, .fal
         margin-right: 8px
@@ -161,6 +163,19 @@
 
       i.fa
         margin-right: 10px
+
+    .archived-lists-item
+      line-height: 40px
+      font-weight: 400
+      button
+        margin: 6px 0
+    .archived-lists-item:after
+      content: ' '
+      display: block
+      width: 100%
+      clear: both
+      height: 1px
+      background: #eeeeee
 
   .sidebar-shortcuts
     margin: 0
