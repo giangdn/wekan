@@ -238,32 +238,72 @@ template(name="editCardAssignerForm")
 
 template(name="cardDetailsActionsPopup")
   ul.pop-over-list
-    li: a.js-toggle-watch-card {{#if isWatching}}{{_ 'unwatch'}}{{else}}{{_ 'watch'}}{{/if}}
+    li: a.js-toggle-watch-card
+      if isWatching
+        i.fal.fa-eye-slash
+      else
+        i.fal.fa-eye
+      | {{#if isWatching}}{{_ 'unwatch'}}{{else}}{{_ 'watch'}}{{/if}}
   if canModifyCard
+    ul.pop-over-list
+      li: a.js-set-card-color
+        i.fal.fa-palette
+        | {{_ 'setCardColorPopup-title'}}
     hr
     ul.pop-over-list
-      li: a.js-members {{_ 'card-edit-members'}}
-      li: a.js-labels {{_ 'card-edit-labels'}}
-      li: a.js-attachments {{_ 'card-edit-attachments'}}
-      li: a.js-custom-fields {{_ 'card-edit-custom-fields'}}
-      li: a.js-received-date {{_ 'editCardReceivedDatePopup-title'}}
-      li: a.js-start-date {{_ 'editCardStartDatePopup-title'}}
-      li: a.js-due-date {{_ 'editCardDueDatePopup-title'}}
-      li: a.js-end-date {{_ 'editCardEndDatePopup-title'}}
-      li: a.js-spent-time {{_ 'editCardSpentTimePopup-title'}}
-      li: a.js-set-card-color {{_ 'setCardColorPopup-title'}}
+      li: a.js-members
+        i.fal.fa-users
+        | {{_ 'card-edit-members'}}
+      li: a.js-labels
+        i.fal.fa-tags
+        | {{_ 'card-edit-labels'}}
+      li: a.js-attachments
+        i.fal.fa-file-pdf
+        | {{_ 'card-edit-attachments'}}
+      li: a.js-custom-fields
+        i.fal.fa-puzzle-piece
+        | {{_ 'card-edit-custom-fields'}}
+      li: a.js-received-date
+        i.fal.fa-layer-plus
+        | {{_ 'editCardReceivedDatePopup-title'}}
+      li: a.js-start-date
+        i.fal.fa-hourglass-start
+        | {{_ 'editCardStartDatePopup-title'}}
+      li: a.js-due-date
+        i.fal.fa-stopwatch
+        | {{_ 'editCardDueDatePopup-title'}}
+      li: a.js-end-date
+        i.fal.fa-hourglass-end
+        | {{_ 'editCardEndDatePopup-title'}}
+      li: a.js-spent-time
+        i.fal.fa-clock
+        | {{_ 'editCardSpentTimePopup-title'}}
     hr
     ul.pop-over-list
-      li: a.js-move-card-to-top {{_ 'moveCardToTop-title'}}
-      li: a.js-move-card-to-bottom {{_ 'moveCardToBottom-title'}}
+      li: a.js-move-card-to-top
+        i.fal.fa-arrow-to-top
+        | {{_ 'moveCardToTop-title'}}
+      li: a.js-move-card-to-bottom
+        i.fal.fa-arrow-to-bottom
+        | {{_ 'moveCardToBottom-title'}}
     hr
     ul.pop-over-list
-      li: a.js-move-card {{_ 'moveCardPopup-title'}}
-      li: a.js-copy-card {{_ 'copyCardPopup-title'}}
-      li: a.js-copy-checklist-cards {{_ 'copyChecklistToManyCardsPopup-title'}}
+      li: a.js-move-card
+        i.fal.fa-arrows
+        | {{_ 'moveCardPopup-title'}}
+      li: a.js-copy-card
+        i.fal.fa-copy
+        | {{_ 'copyCardPopup-title'}}
+      li: a.js-copy-checklist-cards
+        i.fal.fa-clipboard-list
+        | {{{_ 'copyChecklistToManyCardsPopup-title'}}}
       unless archived
-        li: a.js-archive {{_ 'archive-card'}}
-      li: a.js-more {{_ 'cardMorePopup-title'}}
+        li: a.js-archive
+          i.fal.fa-file-archive
+          | {{_ 'archive-card'}}
+      li: a.js-more
+        i.fal.fa-ellipsis-h
+        | {{_ 'cardMorePopup-title'}}
 
 template(name="moveCardPopup")
   div.popup-content-wrapper
@@ -276,10 +316,11 @@ template(name="copyCardPopup")
   +boardsAndLists
 
 template(name="copyChecklistToManyCardsPopup")
-  label(for='copy-checklist-cards-title') {{_ 'copyChecklistToManyCardsPopup-instructions'}}:
-  textarea#copy-card-title.minicard-composer-textarea.js-card-title(autofocus)
-    | {{_ 'copyChecklistToManyCardsPopup-format'}}
-  +boardsAndLists
+  div.content-spacing
+    label(for='copy-checklist-cards-title') {{_ 'copyChecklistToManyCardsPopup-instructions'}}:
+    textarea#copy-card-title.minicard-composer-textarea.js-card-title(autofocus)
+      | {{_ 'copyChecklistToManyCardsPopup-format'}}
+    +boardsAndLists
 
 template(name="boardsAndLists")
   label {{_ 'boards'}}:
@@ -316,7 +357,7 @@ template(name="cardMembersPopup")
             i.fal.fa-check
 
 template(name="cardMorePopup")
-  p.quiet
+  div.content-spacing
     span.clearfix
       span {{_ 'link-card'}}
       = ' '
