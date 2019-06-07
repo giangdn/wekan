@@ -1,16 +1,18 @@
 template(name="cardCustomFieldsPopup")
-    ul.pop-over-list
-        each board.customFields
-            li.item(class="")
-                a.name.js-select-field(href="#")
-                    span.full-name
-                        = name
-                    if hasCustomField
-                        i.far.fa-check
-    hr
-    a.quiet-button.full.js-settings
-        i.fal.fa-cog
-        span {{_ 'settings'}}
+    div.content-spacing
+        if board.customFields.length
+            ul.pop-over-list
+                each board.customFields
+                    li.item(class="")
+                        a.name.js-select-field(href="#")
+                            span.full-name
+                                = name
+                            if hasCustomField
+                                i.far.fa-check
+            hr
+        a.quiet-button.full.js-settings
+            i.fal.fa-cog
+            span {{_ 'settings'}}
 
 template(name="cardCustomField")
     +Template.dynamic(template=getTemplate)
